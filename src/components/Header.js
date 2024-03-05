@@ -23,7 +23,9 @@ const Header = () => {
           <div className="row align-items-center">
             <div className="col-2">
               <h2>
-                <Link to= "/" className="text-black">Candy Shop</Link>
+                <Link to="/" className="text-black">
+                  Candy Shop
+                </Link>
               </h2>
             </div>
             <div className="col-8">
@@ -76,7 +78,7 @@ const Header = () => {
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
-                    <BiSolidCategory />
+                      <BiSolidCategory />
                       <span className="ms-1">Categories</span>
                     </button>
                     <ul className="dropdown-menu">
@@ -101,13 +103,13 @@ const Header = () => {
               </div>
             </div>
             <div className="col-2">
-            <div className="menu-links">
-                  <div className="d-flex gap-15">
-                    <NavLink to="/">Home</NavLink>
-                    <NavLink to="/about">About</NavLink>
-                    <NavLink to="/contact">Contact</NavLink>
-                  </div>
+              <div className="menu-links">
+                <div className="d-flex gap-15">
+                  <NavLink to="/">Home</NavLink>
+                  <NavLink to="/about">About</NavLink>
+                  <NavLink to="/contact">Contact</NavLink>
                 </div>
+              </div>
             </div>
           </div>
         </div>
