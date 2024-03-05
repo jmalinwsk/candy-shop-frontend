@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
+import { FaShoppingCart, FaStar, FaUser } from "react-icons/fa";
+import { BiSolidCategory } from "react-icons/bi";
 
 const Header = () => {
   return (
@@ -41,18 +43,18 @@ const Header = () => {
             <div className="col-2">
               <div className="header-upper-links d-flex align-items-center justify-content-between">
                 <div>
-                  <Link>
-                    <img src="images/icons/user.svg" alt="Sign in" />
+                  <Link to="/account">
+                    <FaUser />
                   </Link>
                 </div>
                 <div>
-                  <Link>
-                    <img src="images/icons/star.svg" alt="Wishlist" />
+                  <Link to="/wishlist">
+                    <FaStar />
                   </Link>
                 </div>
                 <div>
-                  <Link className="d-flex align-items-center">
-                    <img src="images/icons/shopping-cart.svg" alt="Cart" />
+                  <Link to="/cart">
+                    <FaShoppingCart />
                     <span className="badge badge-info">0</span>
                   </Link>
                 </div>
@@ -74,7 +76,7 @@ const Header = () => {
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
-                    <img className="mb-1" src="images/icons/apps.svg" alt=""/>
+                    <BiSolidCategory />
                       <span className="ms-1">Categories</span>
                     </button>
                     <ul className="dropdown-menu">

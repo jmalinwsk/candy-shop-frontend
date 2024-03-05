@@ -88,7 +88,7 @@ a {
   color: white;
 }
 
-.header-upper-links img {
+.header-upper-links svg {
   width: 30px;
   height: 30px;
 }
@@ -100,9 +100,9 @@ a {
   text-transform: uppercase;
 }
 
-.header-bottom .dropdown img {
-  width: 17px;
-  height: 17px;
+.header-bottom .dropdown svg {
+  width: 20px;
+  height: 20px;
 }
 
 .header-bottom .dropdown-menu {
@@ -121,3 +121,17 @@ a {
 }
 
 /* Header part end */
+
+/* Footer part */
+
+footer {
+  background-color: var(--header-upper-background-color);
+}
+
+.social-icons svg {
+  width: 45px;
+  height: 45px;
+  margin: 2px;
+}
+
+/* Footer part end */
