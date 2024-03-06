@@ -20,7 +20,7 @@ const Home = () => {
       <section className="home-wrapper-2 py-3">
         <div className="container-xxl">
         <h3>Featured brands</h3>
-          <div className="row row-cols-4">
+          <div className="row row-cols-4 align-items-center">
             <div className="col-3">
               <img src="images/haribo-logo.png" className="img-fluid" alt="Haribo"/>
             </div>
@@ -28,12 +28,17 @@ const Home = () => {
               <img src="images/skittles-logo.png" className="img-fluid" alt="Skittles"/>
             </div>
             <div className="col-3">
-              <img src="images/kit-kat-logo.png" className="img-fluid" alt="Kit Kat"/>
+              <img src="images/mms-logo.png" className="img-fluid" alt="m&m's"/>
             </div>
             <div className="col-3">
-              <img src="images/milka-logo.png" className="img-fluid" alt="Milka"/>
+              <img src="images/chupa-chups-logo.png" className="img-fluid" alt="Chupa Chups"/>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="home-wrapper-3 py-3">
+        <div className="container-xxl">
+          <div className="row"></div>
         </div>
       </section>
     </>
