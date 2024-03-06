@@ -138,4 +138,22 @@ footer {
 
 /* Home part */
 
+.categories {
+  background-color: var(--header-bottom-background-color);
+  box-shadow: 0 0 10px var(--bssearch-background-color);
+  padding: 5px;
+}
+
+.categories div:nth-child(1),
+.categories div:nth-child(2),
+.categories div:nth-child(3),
+.categories div:nth-child(4) {
+  border-right: 1px solid;
+}
+
+
+.categories p {
+  text-align: center;
+}
+
 /* Home part end */
