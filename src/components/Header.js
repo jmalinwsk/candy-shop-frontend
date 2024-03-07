@@ -3,6 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { FaShoppingCart, FaStar, FaUser } from "react-icons/fa";
 import { BiSolidCategory } from "react-icons/bi";
+import Marquee from "react-fast-marquee";
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
           <div className="row">
             <div className="col-12">
               <p className="text-white mb-0">
-                This site is for demonstation purposes only!
+                <Marquee>This site is for demonstation purposes only!</Marquee>
               </p>
             </div>
           </div>
