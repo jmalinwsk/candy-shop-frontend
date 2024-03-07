@@ -33,24 +33,44 @@ const Home = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="categories d-flex justify-content-between align-items-center">
-            <div className="col">
-              <img src="images/high-angle-view-colorful-lollipops-yellow-surface.jpg" className="img-fluid rounded-4 p-2" alt="lollipops"/>
+              <div className="col">
+                <img
+                  src="images/high-angle-view-colorful-lollipops-yellow-surface.jpg"
+                  className="img-fluid rounded-4 p-2"
+                  alt="lollipops"
+                />
                 <p>Lollipops</p>
               </div>
               <div className="col">
-                <img src="images/still-life-colorful-gummy-bears.jpg" className="img-fluid rounded-4 p-2" alt="gummy bears"/>
+                <img
+                  src="images/still-life-colorful-gummy-bears.jpg"
+                  className="img-fluid rounded-4 p-2"
+                  alt="gummy bears"
+                />
                 <p>Gummies</p>
               </div>
               <div className="col">
-                <img src="images/zigzags-from-jelly-strips.jpg" className="img-fluid rounded-4 p-2" alt="chewing gums"/>
+                <img
+                  src="images/zigzags-from-jelly-strips.jpg"
+                  className="img-fluid rounded-4 p-2"
+                  alt="chewing gums"
+                />
                 <p>Chewing gums</p>
               </div>
               <div className="col">
-                <img src="images/heap-nice-candy-buttons.jpg" className="img-fluid rounded-4 p-2" alt="candies"/>
+                <img
+                  src="images/heap-nice-candy-buttons.jpg"
+                  className="img-fluid rounded-4 p-2"
+                  alt="candies"
+                />
                 <p>Candies</p>
               </div>
               <div className="col">
-                <img src="images/pink-soft-marshmallows.jpg" className="img-fluid rounded-4 p-2" alt="marshmallows"/>
+                <img
+                  src="images/pink-soft-marshmallows.jpg"
+                  className="img-fluid rounded-4 p-2"
+                  alt="marshmallows"
+                />
                 <p>Marshmallows</p>
               </div>
             </div>
@@ -61,33 +81,15 @@ const Home = () => {
         <div className="container-xxl">
           <h3>Featured brands</h3>
           <div className="row">
-          <div className="brands">
-          <Marquee pauseOnHover="true">
-              <img
-                src="images/haribo-logo.png"
-                alt="Haribo"
-              />
-              <img
-                src="images/skittles-logo.png"
-                alt="Skittles"
-              />
-              <img
-                src="images/mms-logo.png"
-                alt="m&m's"
-              />
-                            <img
-                src="images/hubba-bubba-logo.png"
-                alt="Hubba Bubba"
-              />
-              <img
-                src="images/chupa-chups-logo.png"
-                alt="Chupa Chups"
-              />
-
-            </Marquee>
-          </div>
-            
-            
+            <div className="brands">
+              <Marquee pauseOnHover="true">
+                <img src="images/haribo-logo.png" alt="Haribo" />
+                <img src="images/skittles-logo.png" alt="Skittles" />
+                <img src="images/mms-logo.png" alt="m&m's" />
+                <img src="images/hubba-bubba-logo.png" alt="Hubba Bubba" />
+                <img src="images/chupa-chups-logo.png" alt="Chupa Chups" />
+              </Marquee>
+            </div>
           </div>
         </div>
       </section>
