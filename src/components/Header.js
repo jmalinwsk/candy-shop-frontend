@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { FaShoppingCart, FaStar, FaUser } from "react-icons/fa";
 import { BiSolidCategory } from "react-icons/bi";
@@ -23,11 +23,11 @@ const Header = () => {
         <div className="container-xxl">
           <div className="row align-items-center">
             <div className="col-2">
-              <h2>
+              <h3>
                 <Link to="/" className="text-black">
                   Candy Shop
                 </Link>
-              </h2>
+              </h3>
             </div>
             <div className="col-8">
               <div className="input-group">
@@ -69,7 +69,7 @@ const Header = () => {
       <header className="header-bottom py-2">
         <div className="container-xxl">
           <div className="row align-items-center">
-            <div className="col-10">
+            <div className="col-12">
               <div className="menu-bottom">
                 <div>
                   <div className="dropdown">
@@ -100,15 +100,6 @@ const Header = () => {
                       </li>
                     </ul>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-2">
-              <div className="menu-links">
-                <div className="d-flex gap-15">
-                  <NavLink to="/">Home</NavLink>
-                  <NavLink to="/about">About</NavLink>
-                  <NavLink to="/contact">Contact</NavLink>
                 </div>
               </div>
             </div>

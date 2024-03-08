@@ -18,6 +18,7 @@ const Footer = () => {
                   <Link to="/privacypolicy">Privacy Policy</Link>
                   <Link to="/tos">Terms of Service</Link>
                   <Link to="/shipping">Shipping</Link>
+                  <Link to="/contact">Contact</Link>
                 </div>
               </div>
               <div className="col-5">

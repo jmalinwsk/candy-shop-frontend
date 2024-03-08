@@ -145,7 +145,6 @@ footer {
 .categories {
   background-color: var(--header-bottom-background-color);
   box-shadow: 0 0 10px var(--bssearch-background-color);
-  padding: 5px;
 }
 
 .categories div:nth-child(1),
@@ -160,3 +159,15 @@ footer {
 }
 
 /* Home part end */
+
+/* Product card part */
+
+.product-card {
+  padding: 10px;
+  background-color: blue;
+}
+
+.wishlist-icon {
+  margin-left: 5px;
+}
+/* Product card end */

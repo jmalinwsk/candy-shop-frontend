@@ -1,5 +1,6 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
+import ProductCard from "../components/ProductCard";
 
 const Home = () => {
   return (
@@ -32,7 +33,8 @@ const Home = () => {
       <section className="home-wrapper-2 py-3">
         <div className="container-xxl">
           <div className="row">
-            <div className="categories d-flex justify-content-between align-items-center">
+          <div className="col-12">
+          <div className="categories d-flex justify-content-between align-items-center">
               <div className="col">
                 <img
                   src="images/high-angle-view-colorful-lollipops-yellow-surface.jpg"
@@ -75,11 +77,13 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          </div>
         </div>
       </section>
       <section className="home-wrapper-3 py-3">
         <div className="container-xxl">
-          <h3>Featured brands</h3>
+          <h3 className="section-heading">Featured brands</h3>
           <div className="row">
             <div className="brands">
               <Marquee pauseOnHover="true">
@@ -95,9 +99,44 @@ const Home = () => {
       </section>
       <section className="home-wrapper-4 py-3">
         <div className="container-xxl">
-          <h3>Special products</h3>
+        <div className="row">
+        <div className="col-12">
+        <h3 className="section-heading">New arrivals</h3>
+        </div>
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+        </div>
         </div>
       </section>
+      <section className="home-wrapper-5 py-3">
+        <div className="container-xxl">
+        <div className="row rol-cols-4">
+        <div className="col-12">
+        <h3 className="section-heading">Featured products</h3>
+        </div>
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+        </div>
+        </div>
+      </section>
+      <section className="home-wrapper-6 py-3">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <h3 className="section-heading">About our shop</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+      </section> 
     </>
   );
 };
