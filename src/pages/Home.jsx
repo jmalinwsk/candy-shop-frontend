@@ -1,11 +1,16 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 import ProductCard from "../components/ProductCard";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Pagination} from "swiper/modules";
+
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const Home = () => {
   return (
     <>
-      <section className="home-wrapper-1 py-3">
+      <section className="banners-wrapper py-3">
         <div className="container-xxl">
           <div className="row">
             <div className="col-8">
@@ -30,7 +35,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="home-wrapper-2 py-3">
+      <section className="categories-wrapper py-3">
         <div className="container-xxl">
           <div className="row">
           <div className="col-12">
@@ -81,7 +86,20 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="home-wrapper-3 py-3">
+      <section className="new-wrapper py-3">
+        <div className="container-xxl">
+        <div className="row">
+        <div className="col-12">
+        <h3 className="section-heading">New arrivals</h3>
+        </div>
+          <ProductCard className="p-0"/>
+          <ProductCard className="p-0"/>
+          <ProductCard className="p-0"/>
+          <ProductCard className="p-0"/>
+        </div>
+        </div>
+      </section>
+      <section className="brands-wrapper py-3">
         <div className="container-xxl">
           <h3 className="section-heading">Featured brands</h3>
           <div className="row">
@@ -97,33 +115,51 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="home-wrapper-4 py-3">
+
+      <section className="featured-wrapper py-3">
         <div className="container-xxl">
         <div className="row">
         <div className="col-12">
-        <h3 className="section-heading">New arrivals</h3>
-        </div>
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-        </div>
-        </div>
-      </section>
-      <section className="home-wrapper-5 py-3">
-        <div className="container-xxl">
-        <div className="row rol-cols-4">
-        <div className="col-12">
         <h3 className="section-heading">Featured products</h3>
         </div>
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
+        <div className="col-12">
+        <Swiper
+          slidesPerView={4}
+          grabCursor={true}
+          spaceBetween={1}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className=""
+        >
+          <SwiperSlide className="me-3">
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide className="me-3">
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide className="me-3">
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide className="me-3">
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide className="me-3">
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide className="me-3">
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide className="me-3">
+            <ProductCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard />
+          </SwiperSlide>
+        </Swiper>
+        </div>
+        
         </div>
         </div>
       </section>

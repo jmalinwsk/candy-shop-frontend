@@ -158,16 +158,23 @@ footer {
   text-align: center;
 }
 
+
+
 /* Home part end */
 
 /* Product card part */
 
 .product-card {
-  padding: 10px;
+  padding: 15px;
   background-color: blue;
 }
 
-.wishlist-icon {
+.product-card .wishlist-icon {
   margin-left: 5px;
 }
+
+.featured-wrapper .product-card {
+  margin-bottom: 45px;
+}
+
 /* Product card end */
