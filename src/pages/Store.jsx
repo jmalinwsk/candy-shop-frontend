@@ -103,13 +103,23 @@ const Store = () => {
                   <div className="row g-2">
                     <div className="col-md">
                       <div className="form-floating">
-                        <input type="email" className="form-control" id="" placeholder="From"/>
+                        <input
+                          type="email"
+                          className="form-control"
+                          id=""
+                          placeholder="From"
+                        />
                         <label for="floatingInput">From</label>
                       </div>
                     </div>
                     <div className="col-md">
                       <div class="form-floating">
-                        <input type="email" className="form-control" id="" placeholder="To"/>
+                        <input
+                          type="email"
+                          className="form-control"
+                          id=""
+                          placeholder="To"
+                        />
                         <label for="floatingInput">To</label>
                       </div>
                     </div>
