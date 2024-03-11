@@ -6,35 +6,38 @@ import { Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import Meta from "../components/Meta";
 
 const Home = () => {
   return (
     <>
+      <Meta title={"Candy Shop"} />
       <section className="banners-wrapper py-3">
         <div className="container-xxl">
           <div className="row">
             <div className="col-8">
-            <Swiper
-              spaceBetween={30}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Pagination]}>
-              <SwiperSlide>
-              <img
-                src="images/main-banner.jpg"
-                className="img-fluid rounded-2"
-                alt="Main promo banner"
-              />
-              </SwiperSlide>
-              <SwiperSlide>
-              <img
-                src="images/main-banner.jpg"
-                className="img-fluid rounded-2"
-                alt="Main promo banner"
-              />
-              </SwiperSlide>
-            </Swiper>
+              <Swiper
+                spaceBetween={10}
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[Pagination]}
+              >
+                <SwiperSlide>
+                  <img
+                    src="images/main-banner.jpg"
+                    className="img-fluid rounded-2"
+                    alt="Main promo banner"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src="images/main-banner.jpg"
+                    className="img-fluid rounded-2"
+                    alt="Main promo banner"
+                  />
+                </SwiperSlide>
+              </Swiper>
             </div>
             <div className="col-4 d-flex flex-wrap">
               <img

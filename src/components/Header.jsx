@@ -69,39 +69,40 @@ const Header = () => {
       <header className="header-bottom py-2">
         <div className="container-xxl">
           <div className="row align-items-center">
-            <div className="col-12">
+            <div className="col">
               <div className="menu-bottom">
-                <div>
-                  <div className="dropdown">
-                    <button
-                      className="btn btn-secondary dropdown-toggle bg-transparent border-0"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <BiSolidCategory />
-                      <span className="ms-1">Categories</span>
-                    </button>
-                    <ul className="dropdown-menu">
-                      <li>
-                        <Link className="dropdown-item text-white" to="">
-                          Action
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className="dropdown-item text-white" to="">
-                          Another action
-                        </Link>
-                      </li>
-                      <li>
-                        <Link className="dropdown-item text-white" to="">
-                          Something else here
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
+                <div className="dropdown">
+                  <button
+                    className="btn btn-secondary dropdown-toggle bg-transparent border-0"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <BiSolidCategory />
+                    <span className="ms-1">Categories</span>
+                  </button>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <Link className="dropdown-item text-white" to="">
+                        Action
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item text-white" to="">
+                        Another action
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item text-white" to="">
+                        Something else here
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
               </div>
+            </div>
+            <div className="col">
+              <Link to="/store">Store</Link>
             </div>
           </div>
         </div>
