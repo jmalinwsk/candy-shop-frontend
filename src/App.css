@@ -53,6 +53,7 @@
 
 body {
   font-family: "Rubik", sans-serif;
+  overflow-y: scroll;
 }
 
 a {
@@ -176,3 +177,11 @@ footer {
 }
 
 /* Product card end */
+
+/* Store part */
+
+.filter-card {
+  background-color: var(--header-upper-background-color);
+}
+
+/* Store part end */

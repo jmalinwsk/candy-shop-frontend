@@ -3,22 +3,10 @@ import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { FaShoppingCart, FaStar, FaUser } from "react-icons/fa";
 import { BiSolidCategory } from "react-icons/bi";
-import Marquee from "react-fast-marquee";
 
 const Header = () => {
   return (
     <>
-      <header className="header-top-strip py-1">
-        <div className="container-xxl">
-          <div className="row">
-            <div className="col-12">
-              <p className="text-white mb-0">
-                <Marquee>This site is for demonstation purposes only!</Marquee>
-              </p>
-            </div>
-          </div>
-        </div>
-      </header>
       <header className="header-upper py-3">
         <div className="container-xxl">
           <div className="row align-items-center">
