@@ -14,11 +14,27 @@ const Home = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="col-8">
+            <Swiper
+              spaceBetween={30}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Pagination]}>
+              <SwiperSlide>
               <img
                 src="images/main-banner.jpg"
                 className="img-fluid rounded-2"
                 alt="Main promo banner"
               />
+              </SwiperSlide>
+              <SwiperSlide>
+              <img
+                src="images/main-banner.jpg"
+                className="img-fluid rounded-2"
+                alt="Main promo banner"
+              />
+              </SwiperSlide>
+            </Swiper>
             </div>
             <div className="col-4 d-flex flex-wrap">
               <img
@@ -114,7 +130,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       <section className="featured-wrapper py-3">
         <div className="container-xxl">
           <div className="row">
@@ -161,7 +176,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="home-wrapper-6 py-3">
+      <section className="about-wrapper py-3">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
