@@ -9,7 +9,7 @@ import Meta from "../components/Meta";
 import ProductCard from "../components/ProductCard";
 
 const Store = () => {
-  const [grid, setGrid] = useState(4);
+  const [grid, setGrid] = useState(3);
   return (
     <>
       <Meta title={"Store - Candy Shop"} />
@@ -154,22 +154,25 @@ const Store = () => {
                 <div className="products-view-change d-flex align-items-center">
                   <TfiLayoutMenuV
                     onClick={() => {
-                      setGrid(1);
+                      setGrid(12);
                     }}
                   />
                   <TfiLayoutColumn2
                     onClick={() => {
-                      setGrid(2);
+                      setGrid(6);
                     }}
                   />
                   <TfiLayoutColumn4
                     onClick={() => {
-                      setGrid(4);
+                      setGrid(3);
                     }}
                   />
                 </div>
               </div>
               <div className="products-wrapper py-3">
+                <div className="d-flex flex-wrap">
+                  <ProductCard grid={grid} />
+                </div>
               </div>
             </div>
           </div>

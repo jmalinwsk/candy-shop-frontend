@@ -168,7 +168,7 @@ footer {
 /* Product card part */
 
 .product-card {
-  padding: 15px;
+  padding: 10px;
   background-color: blue;
 }
 
@@ -178,6 +178,10 @@ footer {
 
 .featured-wrapper .product-card {
   margin-bottom: 45px;
+}
+
+.col-12 .product-card {
+  display: flex;
 }
 
 /* Product card end */
