@@ -33,13 +33,19 @@ const ProductCard = (props) => {
               isHalf={true}
               edit={false}
             />
-            <p className={`product-description ${grid === 12 ? "d-block" : "d-none"}`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <p
+              className={`product-description ${grid === 12 ? "d-block" : "d-none"}`}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.{" "}
+            </p>
             <p className="price">$4.50 USD</p>
             <div className="add-to-cart">
-            <button>Add to cart</button>
+              <button>Add to cart</button>
+            </div>
           </div>
-          </div>
-
         </div>
       </div>
     </>
