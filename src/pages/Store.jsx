@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import {
+  TfiLayoutColumn2,
+  TfiLayoutColumn4,
+  TfiLayoutMenuV,
+} from "react-icons/tfi";
 import Breadcrumb from "../components/Breadcrumb";
 import Meta from "../components/Meta";
+import ProductCard from "../components/ProductCard";
 
 const Store = () => {
+  const [grid, setGrid] = useState(4);
   return (
     <>
       <Meta title={"Store - Candy Shop"} />
@@ -10,7 +17,7 @@ const Store = () => {
       <div className="store-wrapper">
         <div className="container-xxl">
           <div className="row">
-            <div className="col-3">
+            <div className="filter-wrapper col-3">
               <div className="filter-card">
                 <h5>Categories</h5>
                 <ul>
@@ -32,7 +39,7 @@ const Store = () => {
                       value=""
                       id=""
                     />
-                    <label className="form-check-label" for="">
+                    <label className="form-check-label" htmlFor="">
                       Available
                     </label>
                   </div>
@@ -43,21 +50,21 @@ const Store = () => {
                       value=""
                       id=""
                     />
-                    <label className="form-check-label" for="">
+                    <label className="form-check-label" htmlFor="">
                       Out of stock
                     </label>
                   </div>
                 </div>
                 <div className="filter-brand">
                   <h6>Brand</h6>
-                  <div class="form-check">
+                  <div className="form-check">
                     <input
                       className="form-check-input"
                       type="checkbox"
                       value=""
                       id=""
                     />
-                    <label className="form-check-label" for="">
+                    <label className="form-check-label" htmlFor="">
                       Haribo
                     </label>
                   </div>
@@ -68,7 +75,7 @@ const Store = () => {
                       value=""
                       id=""
                     />
-                    <label className="form-check-label" for="">
+                    <label className="form-check-label" htmlFor="">
                       Skittles
                     </label>
                   </div>
@@ -82,8 +89,8 @@ const Store = () => {
                       value=""
                       id=""
                     />
-                    <label className="form-check-label" for="">
-                      sweet
+                    <label className="form-check-label" htmlFor="">
+                      Sweet
                     </label>
                   </div>
                   <div className="form-check">
@@ -93,8 +100,8 @@ const Store = () => {
                       value=""
                       id=""
                     />
-                    <label className="form-check-label" for="">
-                      sour
+                    <label className="form-check-label" htmlFor="">
+                      Sour
                     </label>
                   </div>
                 </div>
@@ -109,25 +116,62 @@ const Store = () => {
                           id=""
                           placeholder="From"
                         />
-                        <label for="floatingInput">From</label>
+                        <label htmlFor="floatingInput">From</label>
                       </div>
                     </div>
                     <div className="col-md">
-                      <div class="form-floating">
+                      <div className="form-floating">
                         <input
                           type="email"
                           className="form-control"
                           id=""
                           placeholder="To"
                         />
-                        <label for="floatingInput">To</label>
+                        <label htmlFor="floatingInput">To</label>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-9"></div>
+            <div className="col-9">
+              <div className="sort-view-wrapper d-flex align-items-center">
+                <div className="d-flex align-items-center">
+                  <p className="mb-0">30 Products</p>
+                </div>
+                <div className="sort-by d-flex ms-auto align-items-center">
+                  <p className="d-block w-0 text-center m-auto">Sort by:</p>
+                  <select className="form-select w-auto ms-2">
+                    <option value="most-popular">Most popular</option>
+                    <option value="alph-az">Alphabetically, A-Z</option>
+                    <option value="alph-za">Alphabetically, Z-A</option>
+                    <option value="price-lh">Price, low to high</option>
+                    <option value="price-hl">Price, high to low</option>
+                    <option value="date-no">Date, new to old</option>
+                    <option value="date-on">Date, old to new</option>
+                  </select>
+                </div>
+                <div className="products-view-change d-flex align-items-center">
+                  <TfiLayoutMenuV
+                    onClick={() => {
+                      setGrid(1);
+                    }}
+                  />
+                  <TfiLayoutColumn2
+                    onClick={() => {
+                      setGrid(2);
+                    }}
+                  />
+                  <TfiLayoutColumn4
+                    onClick={() => {
+                      setGrid(4);
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="products-wrapper py-3">
+              </div>
+            </div>
           </div>
         </div>
       </div>
