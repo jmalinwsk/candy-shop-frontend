@@ -15,7 +15,7 @@ const Contact = () => {
             <div className="col-12 d-flex justify-content-between">
               <div className="contact-form col-8">
                 <div>
-                  <h3>Get in touch with us</h3>
+                  <h4>Get in touch with us</h4>
                   <form action="">
                     <div>
                       <input
@@ -47,26 +47,19 @@ const Contact = () => {
                 </div>
               </div>
               <div className="address col-4">
-                <div>
-                  <h3>Address</h3>
-                  <address>
-                    Candy Shop
+              <ul>
+                <li><address>
+                    <b>Candy Shop</b>
                     <br />
                     330 XXX XXXXX
                     <br />
                     New York, NY 100XX
-                  </address>
-                  <p>
-                    <FaInfo /> Monday - Friday, 9 AM - 5 PM
-                  </p>
-                  <p>
-                    <MdEmail />{" "}
-                    <a href="mailto:contact@example.com">contact@example.com</a>
-                  </p>
-                  <p>
-                    <FaPhone /> <a href="tel:+12345678900">+1 (234) 567-8900</a>
-                  </p>
-                </div>
+                  </address></li>
+                  <li><FaInfo /> Monday - Friday, 9 AM - 5 PM</li>
+                  
+                  <li><FaPhone /> <a href="tel:+12345678900">+1 (234) 567-8900</a></li>
+                  <li><MdEmail /> <a href="mailto:contact@example.com">contact@example.com</a></li>
+              </ul>
               </div>
             </div>
           </div>

@@ -2,9 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--color-white-smoke);
 }
 
 :root {
+  --color-shakespeare: #61A0AF;
+  --color-regent-st-blue: #96C9DC;
+  --color-pale-violet-red: #F06C9B;
+  --color-melon: #F9B9B7;
+  --color-splash: #F5D491;
+  --color-jagger: #3F3047;
+  --color-white-smoke: #F8F8F8;
+  --color-whisper: #ECECEC;
   --header-strip-background-color: #9e2f28;
   --header-upper-background-color: #c45d55;
   --bssearch-background-color: #9e2f28;
@@ -36,21 +45,9 @@ a {
 
 /* Header part */
 
-.header-top-strip {
-  background-color: var(--header-strip-background-color);
-}
-
-.header-upper {
-  background-color: var(--header-upper-background-color);
-}
-
-.header-bottom {
-  background-color: var(--header-bottom-background-color);
-}
-
 .header-upper .input-group-text {
-  background-color: var(--bssearch-background-color);
-  color: white;
+  background-color: var(--color-white-smoke);
+  color: var(--color-jagger);
 }
 
 .header-upper-links svg {
@@ -89,10 +86,6 @@ a {
 
 /* Footer part */
 
-footer {
-  background-color: var(--header-upper-background-color);
-}
-
 .social-icons svg {
   width: 45px;
   height: 45px;
@@ -108,7 +101,6 @@ footer {
 }
 
 .categories {
-  background-color: var(--header-bottom-background-color);
   box-shadow: 0 0 10px var(--bssearch-background-color);
 }
 
@@ -129,7 +121,7 @@ footer {
 
 .product-card {
   padding: 10px;
-  background-color: blue;
+  background-color: var(--color-whisper);
 }
 
 .product-card .wishlist-icon {
