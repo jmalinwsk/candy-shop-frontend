@@ -17,7 +17,7 @@ const Contact = () => {
                 <div>
                   <h3>Get in touch with us</h3>
                   <form action="">
-                  <div>
+                    <div>
                       <input
                         type="text"
                         className="form-control"
@@ -50,16 +50,22 @@ const Contact = () => {
                 <div>
                   <h3>Address</h3>
                   <address>
-                  Candy Shop<br />
-                    330 XXX XXXXX<br />
+                    Candy Shop
+                    <br />
+                    330 XXX XXXXX
+                    <br />
                     New York, NY 100XX
                   </address>
-                    <p><FaInfo /> Monday - Friday, 9 AM - 5 PM</p>
-                    <p><MdEmail /> <a href="mailto:contact@example.com">
-                      contact@example.com
-                    </a></p>
-                    <p><FaPhone /> <a href="tel:+12345678900">+1 (234) 567-8900</a></p>
-                    
+                  <p>
+                    <FaInfo /> Monday - Friday, 9 AM - 5 PM
+                  </p>
+                  <p>
+                    <MdEmail />{" "}
+                    <a href="mailto:contact@example.com">contact@example.com</a>
+                  </p>
+                  <p>
+                    <FaPhone /> <a href="tel:+12345678900">+1 (234) 567-8900</a>
+                  </p>
                 </div>
               </div>
             </div>

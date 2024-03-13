@@ -17,8 +17,8 @@ const Store = () => {
       <div className="store-wrapper">
         <div className="container-xxl">
           <div className="row">
-            <div className="filter-wrapper col-3">
-              <div className="filter-card">
+            <div className="categories-filter-wrapper col-3 py-3">
+              <div className="categories-card">
                 <h5>Categories</h5>
                 <ul>
                   <li>Lollipops</li>
@@ -132,9 +132,10 @@ const Store = () => {
                     </div>
                   </div>
                 </div>
+                <button>Submit</button>
               </div>
             </div>
-            <div className="col-9">
+            <div className="col-9 py-3">
               <div className="sort-view-wrapper d-flex align-items-center">
                 <div className="d-flex align-items-center">
                   <p className="mb-0">30 Products</p>
