@@ -47,19 +47,28 @@ const Contact = () => {
                 </div>
               </div>
               <div className="address col-4">
-              <ul>
-                <li><address>
-                    <b>Candy Shop</b>
-                    <br />
-                    330 XXX XXXXX
-                    <br />
-                    New York, NY 100XX
-                  </address></li>
-                  <li><FaInfo /> Monday - Friday, 9 AM - 5 PM</li>
-                  
-                  <li><FaPhone /> <a href="tel:+12345678900">+1 (234) 567-8900</a></li>
-                  <li><MdEmail /> <a href="mailto:contact@example.com">contact@example.com</a></li>
-              </ul>
+                <ul>
+                  <li>
+                    <address>
+                      <b>Candy Shop</b>
+                      <br />
+                      330 XXX XXXXX
+                      <br />
+                      New York, NY 100XX
+                    </address>
+                  </li>
+                  <li>
+                    <FaInfo /> Monday - Friday, 9 AM - 5 PM
+                  </li>
+
+                  <li>
+                    <FaPhone /> <a href="tel:+12345678900">+1 (234) 567-8900</a>
+                  </li>
+                  <li>
+                    <MdEmail />{" "}
+                    <a href="mailto:contact@example.com">contact@example.com</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

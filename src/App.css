@@ -6,14 +6,14 @@
 }
 
 :root {
-  --color-shakespeare: #61A0AF;
-  --color-regent-st-blue: #96C9DC;
-  --color-pale-violet-red: #F06C9B;
-  --color-melon: #F9B9B7;
-  --color-splash: #F5D491;
-  --color-jagger: #3F3047;
-  --color-white-smoke: #F8F8F8;
-  --color-whisper: #ECECEC;
+  --color-shakespeare: #61a0af;
+  --color-regent-st-blue: #96c9dc;
+  --color-pale-violet-red: #f06c9b;
+  --color-melon: #f9b9b7;
+  --color-splash: #f5d491;
+  --color-jagger: #3f3047;
+  --color-white-smoke: #f8f8f8;
+  --color-whisper: #ececec;
   --header-strip-background-color: #9e2f28;
   --header-upper-background-color: #c45d55;
   --bssearch-background-color: #9e2f28;
@@ -160,3 +160,16 @@ a {
 /* Contact part */
 
 /* Contact part end */
+
+/* Wishlist part */
+
+.wishlist-card {
+  padding: 5px;
+}
+
+.remove-from-wishlist svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* Wishlist part end */
