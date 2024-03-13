@@ -1,13 +1,13 @@
 import React from "react";
 import { RxCross1 } from "react-icons/rx";
 import Meta from "../components/Meta";
-import Breadcrumb from "../components/Breadcrumb";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const Wishlist = () => {
   return (
     <>
       <Meta title={"Wishlist - Candy Shop"} />
-      <Breadcrumb title="Wishlist" />
+      <Breadcrumbs title="Wishlist" />
       <div className="wishlist-wrapper py-3">
         <div className="container-xxl">
           <div className="row">

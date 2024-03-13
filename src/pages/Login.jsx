@@ -1,6 +1,6 @@
 import React from "react";
 import Meta from "../components/Meta";
-import Breadcrumb from "../components/Breadcrumb";
+import Breadcrumb from "../components/Breadcrumbs";
 import { Link } from "react-router-dom";
 
 const Login = () => {
@@ -33,7 +33,9 @@ const Login = () => {
                   </form>
                 </div>
                 <div>
-                  <Link to="/forgot-password" className="me-3">Forgot your password?</Link>
+                  <Link to="forgot-password" className="me-3">
+                    Forgot your password?
+                  </Link>
                 </div>
                 <div>
                   <button type="submit">Sign in</button>

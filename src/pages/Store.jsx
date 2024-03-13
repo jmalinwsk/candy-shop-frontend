@@ -4,7 +4,7 @@ import {
   TfiLayoutColumn4,
   TfiLayoutMenuV,
 } from "react-icons/tfi";
-import Breadcrumb from "../components/Breadcrumb";
+import Breadcrumb from "../components/Breadcrumbs";
 import Meta from "../components/Meta";
 import ProductCard from "../components/ProductCard";
 

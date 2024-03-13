@@ -24,7 +24,7 @@ function App() {
             <Route path="wishlist" element={<Wishlist />} />
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register />} />
-            <Route path="forgot-password" element={<ForgotPassword />} />
+            <Route path="login/forgot-password" element={<ForgotPassword />} />
           </Route>
         </Routes>
       </BrowserRouter>

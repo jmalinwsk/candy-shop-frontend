@@ -84,6 +84,19 @@ a {
 
 /* Header part end */
 
+/* Breadcrumb part */
+
+.breadcrumb {
+  margin: 0 auto;
+}
+
+a.breadcrumb-item.active::before {
+  content: "➜";
+  margin-left: 5px;
+  margin-right: 5px;
+}
+/* Breadcrumb part end */
+
 /* Footer part */
 
 .social-icons svg {

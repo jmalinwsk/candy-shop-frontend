@@ -2,7 +2,7 @@ import React from "react";
 import { MdEmail } from "react-icons/md";
 import { FaInfo, FaPhone } from "react-icons/fa";
 import Meta from "../components/Meta";
-import Breadcrumb from "../components/Breadcrumb";
+import Breadcrumb from "../components/Breadcrumbs";
 
 const Contact = () => {
   return (
