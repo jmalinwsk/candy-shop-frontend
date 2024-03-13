@@ -34,7 +34,7 @@ const Header = () => {
             <div className="col-2">
               <div className="header-upper-links d-flex align-items-center justify-content-between">
                 <div>
-                  <Link to="/account">
+                  <Link to="/login">
                     <FaUser />
                   </Link>
                 </div>
