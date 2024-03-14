@@ -6,14 +6,14 @@ import { Link } from "react-router-dom";
 const ForgotPassword = () => {
   return (
     <>
-      <Meta title={"Forgot Password - Candy Shop"} />
-      <Breadcrumbs title="Forgot Password" />
+      <Meta title={"Reset Your Password - Candy Shop"} />
+      <Breadcrumbs title="Reset your password" />
       <div className="login-wrapper py-3">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
               <div className="login-card col-4 m-auto">
-                <h4 className="text-center py-3">Login</h4>
+                <h4 className="text-center py-3">Reset your password</h4>
                 <div>
                   <form action="">
                     <input
@@ -23,23 +23,11 @@ const ForgotPassword = () => {
                       placeholder="E-mail"
                       required
                     />
-                    <input
-                      type="password"
-                      name="password"
-                      className="form-control"
-                      placeholder="Password"
-                      required
-                    />
                   </form>
                 </div>
                 <div>
-                  <Link to="/forgot-password" className="me-3">
-                    Forgot your password?
-                  </Link>
-                </div>
-                <div>
-                  <button type="submit">Sign in</button>
-                  <button>Create account</button>
+                  <button type="submit">Submit</button>
+                  <Link to="/login"><button type="button">Cancel</button></Link>
                 </div>
               </div>
             </div>

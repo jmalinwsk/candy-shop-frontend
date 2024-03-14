@@ -33,7 +33,7 @@ const Login = () => {
                   </form>
                 </div>
                 <div>
-                  <Link to="forgot-password" className="me-3">
+                  <Link to="reset-password" className="me-3">
                     Forgot your password?
                   </Link>
                 </div>
