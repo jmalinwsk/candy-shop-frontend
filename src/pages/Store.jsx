@@ -4,7 +4,7 @@ import {
   TfiLayoutColumn4,
   TfiLayoutMenuV,
 } from "react-icons/tfi";
-import Breadcrumb from "../components/Breadcrumbs";
+import Breadcrumbs from "../components/Breadcrumbs";
 import Meta from "../components/Meta";
 import ProductCard from "../components/ProductCard";
 
@@ -13,7 +13,7 @@ const Store = () => {
   return (
     <>
       <Meta title={"Store - Candy Shop"} />
-      <Breadcrumb title="Store" />
+      <Breadcrumbs />
       <div className="store-wrapper">
         <div className="container-xxl">
           <div className="row">

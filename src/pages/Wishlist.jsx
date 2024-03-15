@@ -7,7 +7,7 @@ const Wishlist = () => {
   return (
     <>
       <Meta title={"Wishlist - Candy Shop"} />
-      <Breadcrumbs title="Wishlist" />
+      <Breadcrumbs />
       <div className="wishlist-wrapper py-3">
         <div className="container-xxl">
           <div className="row">

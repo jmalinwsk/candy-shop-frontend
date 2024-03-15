@@ -8,8 +8,8 @@ import Contact from "./pages/Contact";
 import Store from "./pages/Store";
 import Wishlist from "./pages/Wishlist";
 import Login from "./pages/Login";
-import Register from "./pages/Register";
-import ResetPassword from "./pages/ResetPassword";
+import ForgotPassword from "./pages/ForgotPassword";
+import CreateAccount from "./pages/CreateAccount";
 
 function App() {
   return (
@@ -23,8 +23,8 @@ function App() {
             <Route path="store" element={<Store />} />
             <Route path="wishlist" element={<Wishlist />} />
             <Route path="login" element={<Login />} />
-            <Route path="register" element={<Register />} />
-            <Route path="login/reset-password" element={<ResetPassword />} />
+            <Route path="login/forgot-password" element={<ForgotPassword />} />
+            <Route path="create-account" element={<CreateAccount />} />
           </Route>
         </Routes>
       </BrowserRouter>

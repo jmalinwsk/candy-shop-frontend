@@ -2,13 +2,13 @@ import React from "react";
 import { MdEmail } from "react-icons/md";
 import { FaInfo, FaPhone } from "react-icons/fa";
 import Meta from "../components/Meta";
-import Breadcrumb from "../components/Breadcrumbs";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const Contact = () => {
   return (
     <>
       <Meta title={"Contact us - Candy Shop"} />
-      <Breadcrumb title="Contact us" />
+      <Breadcrumbs />
       <div className="contact-wrapper py-3">
         <div className="container-xxl">
           <div className="row">
