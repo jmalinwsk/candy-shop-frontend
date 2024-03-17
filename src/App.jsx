@@ -13,9 +13,9 @@ import CreateAccount from "./pages/CreateAccount";
 import ResetPassword from "./pages/ResetPassword";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import FAQ from "./pages/FAQ";
-import Returns from "./pages/Returns";
+import ReturnAndRefundPolicy from "./pages/ReturnAndRefundPolicy";
 import TermsOfService from "./pages/TermsOfService";
-import Shipping from "./pages/Shipping";
+import ShippingPolicy from "./pages/ShippingPolicy";
 
 function App() {
   return (
@@ -33,10 +33,13 @@ function App() {
             <Route path="login/reset-password" element={<ResetPassword />} />
             <Route path="create-account" element={<CreateAccount />} />
             <Route path="FAQ" element={<FAQ />} />
-            <Route path="returns" element={<Returns />} />
+            <Route
+              path="return-and-refund-policy"
+              element={<ReturnAndRefundPolicy />}
+            />
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
             <Route path="TOS" element={<TermsOfService />} />
-            <Route path="shipping" element={<Shipping />} />
+            <Route path="shipping-policy" element={<ShippingPolicy />} />
           </Route>
         </Routes>
       </BrowserRouter>

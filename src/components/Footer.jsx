@@ -14,10 +14,12 @@ const Footer = () => {
                 <div className="footer-link d-flex flex-column">
                   <Link to="/about">About us</Link>
                   <Link to="/FAQ">FAQ</Link>
-                  <Link to="/returns">Returns</Link>
+                  <Link to="/return-and-refund-policy">
+                    Return and Refund Policy
+                  </Link>
                   <Link to="/privacy-policy">Privacy Policy</Link>
                   <Link to="/TOS">Terms of Service</Link>
-                  <Link to="/shipping">Shipping</Link>
+                  <Link to="/shipping-policy">Shipping Policy</Link>
                   <Link to="/contact">Contact</Link>
                 </div>
               </div>
