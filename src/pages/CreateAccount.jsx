@@ -16,14 +16,14 @@ const CreateAccount = () => {
                 <h4 className="text-center py-3">Create account</h4>
                 <div>
                   <form action="">
-                  <input
+                    <input
                       type="text"
                       name="firstname"
                       className="form-control"
                       placeholder="First name"
                       required
                     />
-                                      <input
+                    <input
                       type="text"
                       name="lastname"
                       className="form-control"
@@ -53,7 +53,6 @@ const CreateAccount = () => {
                   <Link to="/login">
                     <button type="submit">Sign in</button>
                   </Link>
-                  
                 </div>
               </div>
             </div>

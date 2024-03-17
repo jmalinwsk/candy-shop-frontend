@@ -11,11 +11,11 @@ const Header = () => {
         <div className="container-xxl">
           <div className="row align-items-center">
             <div className="col-2">
-              <h3>
+              <p className="m-auto">
                 <Link to="/" className="text-black">
                   Candy Shop
                 </Link>
-              </h3>
+              </p>
             </div>
             <div className="col-8">
               <div className="input-group">

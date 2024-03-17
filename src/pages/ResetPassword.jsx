@@ -1,11 +1,11 @@
-import React from 'react'
-import Meta from '../components/Meta'
-import Breadcrumbs from '../components/Breadcrumbs'
+import React from "react";
+import Meta from "../components/Meta";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const ResetPassword = () => {
   return (
     <>
-        <Meta title={"Reset Your Password - Candy Shop"} />
+      <Meta title={"Reset Your Password - Candy Shop"} />
       <Breadcrumbs />
       <div className="reset-password-wrapper py-3">
         <div className="container-xxl">
@@ -22,7 +22,7 @@ const ResetPassword = () => {
                       placeholder="New password"
                       required
                     />
-                                        <input
+                    <input
                       type="password"
                       name="password"
                       className="form-control"
@@ -32,8 +32,7 @@ const ResetPassword = () => {
                   </form>
                 </div>
                 <div>
-                    <button type="button">Submit</button>
-                  
+                  <button type="button">Submit</button>
                 </div>
               </div>
             </div>
@@ -41,7 +40,7 @@ const ResetPassword = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ResetPassword
+export default ResetPassword;

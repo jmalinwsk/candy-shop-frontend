@@ -14,7 +14,10 @@ const ForgotPassword = () => {
             <div className="col-12">
               <div className="reset-password-card col-4 m-auto">
                 <h4 className="text-center py-3">Forgot your password?</h4>
-                <p>We will send you an e-mail with instructions on how to reset your password.</p>
+                <p>
+                  We will send you an e-mail with instructions on how to reset
+                  your password.
+                </p>
                 <div>
                   <form action="">
                     <input
