@@ -4,7 +4,9 @@ const useHeadingsData = () => {
   const [nestedHeadings, setNestedHeadings] = useState([]);
 
   useEffect(() => {
-    const headingElements = Array.from(document.querySelectorAll("main h3, main h4"));
+    const headingElements = Array.from(
+      document.querySelectorAll("main h3, main h4"),
+    );
 
     const newNestedHeadings = getNestedHeadings(headingElements);
     setNestedHeadings(newNestedHeadings);
@@ -34,10 +36,7 @@ const getNestedHeadings = (headingElements) => {
 const Headings = ({ headings, activeId }) => (
   <ul>
     {headings.map((heading) => (
-      <li 
-        key={heading.id} 
-        className={heading.id === activeId ? "active" : ""}
-        >
+      <li key={heading.id} className={heading.id === activeId ? "active" : ""}>
         <a
           href={`#${heading.id}`}
           onClick={(e) => {
@@ -52,8 +51,8 @@ const Headings = ({ headings, activeId }) => (
         {heading.items.length > 0 && (
           <ul>
             {heading.items.map((child) => (
-              <li 
-                key={child.id} 
+              <li
+                key={child.id}
                 className={child.id === activeId ? "active" : ""}
               >
                 <a
@@ -77,33 +76,32 @@ const Headings = ({ headings, activeId }) => (
 );
 
 const useIntersectionObserver = (setActiveId) => {
-    const headingElementsRef = useRef({});
+  const headingElementsRef = useRef({});
 
   useEffect(() => {
     const callback = (headings) => {
-        headingElementsRef.current = headings.reduce((map, headingElement) => {
-            map[headingElement.target.id] = headingElement;
-            return map;
-        }, headingElementsRef.current);
+      headingElementsRef.current = headings.reduce((map, headingElement) => {
+        map[headingElement.target.id] = headingElement;
+        return map;
+      }, headingElementsRef.current);
 
-        const visibleHeadings = [];
-        Object.keys(headingElementsRef.current).forEach((key) => {
-            const headingElement = headingElementsRef.current[key];
-            if(headingElement.isIntersecting) 
-                visibleHeadings.push(headingElement);
-        })
+      const visibleHeadings = [];
+      Object.keys(headingElementsRef.current).forEach((key) => {
+        const headingElement = headingElementsRef.current[key];
+        if (headingElement.isIntersecting) visibleHeadings.push(headingElement);
+      });
 
-        const getIndexFromId = (id) =>
-            headingElements.findIndex((heading) => heading.id === id);
+      const getIndexFromId = (id) =>
+        headingElements.findIndex((heading) => heading.id === id);
 
-        if (visibleHeadings.length === 1) {
-            setActiveId(visibleHeadings[0].target.id);
-        } else if (visibleHeadings.length > 1) {
-            const sortedVisibleHeadings = visibleHeadings.sort(
-                (a, b) => getIndexFromId(a.target.id) > getIndexFromId(b.target.id)
-            )
-            setActiveId(sortedVisibleHeadings[0].target.id);
-        }
+      if (visibleHeadings.length === 1) {
+        setActiveId(visibleHeadings[0].target.id);
+      } else if (visibleHeadings.length > 1) {
+        const sortedVisibleHeadings = visibleHeadings.sort(
+          (a, b) => getIndexFromId(a.target.id) > getIndexFromId(b.target.id),
+        );
+        setActiveId(sortedVisibleHeadings[0].target.id);
+      }
     };
     const observer = new IntersectionObserver(callback, {
       rootMargin: "-5% 0px -40% 0px",
@@ -117,20 +115,19 @@ const useIntersectionObserver = (setActiveId) => {
 };
 
 const TableOfContents = () => {
-    const [activeId, setActiveId] = useState();
+  const [activeId, setActiveId] = useState();
   const { nestedHeadings } = useHeadingsData();
   useIntersectionObserver(setActiveId);
   return (
     <div className="container-xxl py-3">
-        <div className="row">
-            <div className="col-12">
-            <nav aria-label="Table of contents">
-      <Headings headings={nestedHeadings} activeId={activeId} />
-    </nav>
-            </div>
+      <div className="row">
+        <div className="col-12">
+          <nav aria-label="Table of contents">
+            <Headings headings={nestedHeadings} activeId={activeId} />
+          </nav>
         </div>
+      </div>
     </div>
-
   );
 };
 
