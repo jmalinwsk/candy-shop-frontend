@@ -16,6 +16,7 @@ import FAQ from "./pages/FAQ";
 import ReturnAndRefundPolicy from "./pages/ReturnAndRefundPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import ShippingPolicy from "./pages/ShippingPolicy";
+import SingleProduct from "./pages/SingleProduct";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
             <Route path="store" element={<Store />} />
+            <Route path="store/product/:id" element={<SingleProduct />} />
             <Route path="wishlist" element={<Wishlist />} />
             <Route path="login" element={<Login />} />
             <Route path="login/forgot-password" element={<ForgotPassword />} />

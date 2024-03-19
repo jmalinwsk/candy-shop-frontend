@@ -1,7 +1,7 @@
 import React from "react";
 import { FaRegHeart } from "react-icons/fa";
 import ReactStars from "react-rating-stars-component";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const ProductCard = (props) => {
   let location = useLocation();
@@ -16,16 +16,22 @@ const ProductCard = (props) => {
             <FaRegHeart />
           </div>
           <div className="product-image">
-            <img
-              src="images/products/hubba-bubba-bubble-tap-sour-blue-raspberry.jpg"
-              className="img-fluid"
-              alt="product"
-            />
+            <Link to="/store/product/:id">
+              {" "}
+              <img
+                src="images/products/hubba-bubba-bubble-tap-sour-blue-raspberry.jpg"
+                className="img-fluid"
+                alt="product"
+              />
+            </Link>
           </div>
           <div className="product-details">
-            <h5 className="product-title">
-              Hubba Bubba Bubble Tape Sour Blue Raspberry
-            </h5>
+            <Link to="/store/product/:id">
+              <h5 className="product-title">
+                Hubba Bubba Bubble Tape Sour Blue Raspberry
+              </h5>
+            </Link>
+
             <ReactStars
               count={5}
               value={4.5}
