@@ -11,13 +11,11 @@ const Header = () => {
         <div className="container-xxl">
           <div className="row align-items-center">
             <div className="col-5">
-            
-            <div className="logo-wrapper">
-            <Link to="/">
-                <span>Candy Shop</span>
+              <div className="logo-wrapper">
+                <Link to="/">
+                  <span>Candy Shop</span>
                 </Link>
               </div>
-
             </div>
             <div className="col-5">
               <div className="input-group">
@@ -61,12 +59,24 @@ const Header = () => {
           <div className="row">
             <div className="col-12">
               <div className="navbar">
-              <Link to="/store"><button className="navbar-button">All products</button></Link>
-              <Link to="/store"><button className="navbar-button">Lollipops</button></Link>
-              <Link to="/store"><button className="navbar-button">Gummies</button></Link>
-              <Link to="/store"><button className="navbar-button">Chewing gums</button></Link>
-              <Link to="/store"><button className="navbar-button">Candies</button></Link>
-              <Link to="/store"><button className="navbar-button">Marshmallows</button></Link>
+                <Link to="/store">
+                  <button className="navbar-button">All products</button>
+                </Link>
+                <Link to="/store">
+                  <button className="navbar-button">Lollipops</button>
+                </Link>
+                <Link to="/store">
+                  <button className="navbar-button">Gummies</button>
+                </Link>
+                <Link to="/store">
+                  <button className="navbar-button">Chewing gums</button>
+                </Link>
+                <Link to="/store">
+                  <button className="navbar-button">Candies</button>
+                </Link>
+                <Link to="/store">
+                  <button className="navbar-button">Marshmallows</button>
+                </Link>
               </div>
             </div>
           </div>
