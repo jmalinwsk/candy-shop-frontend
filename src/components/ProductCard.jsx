@@ -48,8 +48,9 @@ const ProductCard = (props) => {
               nisi ut aliquip ex ea commodo consequat.{" "}
             </p>
             <p className="price">$4.50 USD</p>
-            <div className="add-to-cart">
+            <div className="d-flex">
               <button>Add to cart</button>
+              <button>Add to wishlist</button>
             </div>
           </div>
         </div>
