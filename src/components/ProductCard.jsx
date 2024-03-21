@@ -2,6 +2,7 @@ import React from "react";
 import { FaRegHeart } from "react-icons/fa";
 import ReactStars from "react-rating-stars-component";
 import { Link, useLocation } from "react-router-dom";
+import hubbaBubbaImage from "../images/products/hubba-bubba-bubble-tap-sour-blue-raspberry.jpg";
 
 const ProductCard = (props) => {
   let location = useLocation();
@@ -19,7 +20,7 @@ const ProductCard = (props) => {
             <Link to="/store/product/:id">
               {" "}
               <img
-                src="images/products/hubba-bubba-bubble-tap-sour-blue-raspberry.jpg"
+                src={hubbaBubbaImage}
                 className="img-fluid"
                 alt="product"
               />

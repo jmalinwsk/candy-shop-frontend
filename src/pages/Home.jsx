@@ -3,6 +3,19 @@ import Marquee from "react-fast-marquee";
 import ProductCard from "../components/ProductCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import hariboLogo from "../images/logos/haribo.png";
+import skittlesLogo from "../images/logos/skittles.png";
+import mmsLogo from "../images/logos/mms.png";
+import hubbaBubbaLogo from "../images/logos/hubba-bubba.png";
+import chupaChupsLogo from "../images/logos/chupa-chups.png";
+import lollipopsCategoryImage from "../images/categories/lollipops.jpg";
+import gummiesCategoryImage from "../images/categories/gummies.jpg";
+import chewingGumsCategoryImage from "../images/categories/chewing-gums.jpg";
+import candiesCategoryImage from "../images/categories/candies.jpg";
+import marshmallowsCategoryImage from "../images/categories/marshmallows.jpg";
+import firstMainBanner from "../images/banners/main-banner-1.jpg";
+import firstSideBanner from "../images/banners/side-banner-1.jpg";
+import secondSideBanner from "../images/banners/side-banner-2.jpg";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -26,14 +39,14 @@ const Home = () => {
               >
                 <SwiperSlide>
                   <img
-                    src="images/main-banner.jpg"
+                    src={firstMainBanner}
                     className="img-fluid rounded-2"
                     alt="Main promo banner"
                   />
                 </SwiperSlide>
                 <SwiperSlide>
                   <img
-                    src="images/main-banner.jpg"
+                    src={firstMainBanner}
                     className="img-fluid rounded-2"
                     alt="Main promo banner"
                   />
@@ -42,12 +55,12 @@ const Home = () => {
             </div>
             <div className="col-4 d-flex flex-wrap">
               <img
-                src="images/side-banner-1.jpg"
+                src={firstSideBanner}
                 className="img-fluid rounded-2 pb-1"
                 alt="First side promo banner"
               />
               <img
-                src="images/side-banner-2.jpg"
+                src={secondSideBanner}
                 className="img-fluid rounded-2 pt-1"
                 alt="Second side promo banner"
               />
@@ -74,60 +87,58 @@ const Home = () => {
             <div className="col-12">
               <div className="categories d-flex justify-content-between align-items-center">
                 <div className="col">
-                <Link to="/">
-                  <img
-                    src="images/high-angle-view-colorful-lollipops-yellow-surface.jpg"
-                    alt="lollipops"
-                  />
-                  <div className="category-name-wrapper">
-                    <p>Lollipops</p>
-                  </div>
+                  <Link to="/">
+                    <img
+                      src={lollipopsCategoryImage}
+                      alt="lollipops"
+                    />
+                    <div className="category-name-wrapper">
+                      <p>Lollipops</p>
+                    </div>
                   </Link>
                 </div>
                 <div className="col">
-                <Link to="/">
-                <img
-                    src="images/still-life-colorful-gummy-bears.jpg"
-                    alt="gummy bears"
-                  />
-                  <div className="category-name-wrapper">
-                  <p>Gummies</p>
-                  </div>
-                </Link>
-
-                  
-                </div>
-                <div className="col">
-                <Link to="/">
-                  <img
-                    src="images/zigzags-from-jelly-strips.jpg"
-                    alt="chewing gums"
-                  />
-                  <div className="category-name-wrapper">
-                  <p>Chewing Gums</p>
-                  </div>
+                  <Link to="/">
+                    <img
+                      src={gummiesCategoryImage}
+                      alt="gummies"
+                    />
+                    <div className="category-name-wrapper">
+                      <p>Gummies</p>
+                    </div>
                   </Link>
                 </div>
                 <div className="col">
-                <Link to="/">
-                  <img
-                    src="images/heap-nice-candy-buttons.jpg"
-                    alt="candies"
-                  />
-                  <div className="category-name-wrapper">
-                  <p>Candies</p>
-                  </div>
+                  <Link to="/">
+                    <img
+                      src={chewingGumsCategoryImage}
+                      alt="chewing gums"
+                    />
+                    <div className="category-name-wrapper">
+                      <p>Chewing Gums</p>
+                    </div>
                   </Link>
                 </div>
                 <div className="col">
-                <Link to="/">
-                  <img
-                    src="images/pink-soft-marshmallows.jpg"
-                    alt="marshmallows"
-                  />
-                  <div className="category-name-wrapper">
-                  <p>Marshmallows</p>
-                  </div>
+                  <Link to="/">
+                    <img
+                      src={candiesCategoryImage}
+                      alt="candies"
+                    />
+                    <div className="category-name-wrapper">
+                      <p>Candies</p>
+                    </div>
+                  </Link>
+                </div>
+                <div className="col">
+                  <Link to="/">
+                    <img
+                      src={marshmallowsCategoryImage}
+                      alt="marshmallows"
+                    />
+                    <div className="category-name-wrapper">
+                      <p>Marshmallows</p>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -141,11 +152,11 @@ const Home = () => {
           <div className="row">
             <div className="brands">
               <Marquee pauseOnHover="true">
-                <img src="images/haribo-logo.png" alt="Haribo" />
-                <img src="images/skittles-logo.png" alt="Skittles" />
-                <img src="images/mms-logo.png" alt="m&m's" />
-                <img src="images/hubba-bubba-logo.png" alt="Hubba Bubba" />
-                <img src="images/chupa-chups-logo.png" alt="Chupa Chups" />
+                <img src={hariboLogo} alt="Haribo" />
+                <img src={skittlesLogo} alt="Skittles" />
+                <img src={mmsLogo} alt="m&m's" />
+                <img src={hubbaBubbaLogo} alt="Hubba Bubba" />
+                <img src={chupaChupsLogo} alt="Chupa Chups" />
               </Marquee>
             </div>
           </div>

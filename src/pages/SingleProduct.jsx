@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactStars from "react-rating-stars-component";
 import Meta from "../components/Meta";
 import Breadcrumbs from "../components/Breadcrumbs";
-import image from "../images/products/hubba-bubba-bubble-tap-sour-blue-raspberry.jpg";
+import hubbaBubbaImage from "../images/products/hubba-bubba-bubble-tap-sour-blue-raspberry.jpg";
 
 const SingleProduct = () => {
   const [orderedProduct, setOrderedProduct] = useState(true);
@@ -16,7 +16,11 @@ const SingleProduct = () => {
             <div className="row">
               <div className="col-6">
                 <div className="image-wrapper p-1">
-                  <img src={image} className="img-fluid" alt="product" />
+                  <img
+                    src={hubbaBubbaImage}
+                    className="img-fluid"
+                    alt="product"
+                  />
                 </div>
               </div>
               <div className="col-6">
