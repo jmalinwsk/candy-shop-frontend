@@ -6,7 +6,7 @@
 }
 
 :root {
-  --color-shakespeare: #61a0af;
+  --color-boston-blue: #4497AC;
   --color-regent-st-blue: #96c9dc;
   --color-pale-violet-red: #f06c9b;
   --color-melon: #f9b9b7;
@@ -29,7 +29,7 @@ body {
 a {
   text-decoration: none;
   display: inline-block;
-  color: var(--color-shakespeare);
+  color: var(--color-boston-blue);
   transition: color 0.1s;
 }
 
@@ -124,7 +124,7 @@ button:hover {
 }
 
 .logo-wrapper span:hover {
-  text-shadow: 2px 2px var(--color-shakespeare);
+  text-shadow: 2px 2px var(--color-boston-blue);
 }
 
 .header-upper .input-group-text {
@@ -172,7 +172,7 @@ button:hover {
 }
 
 .navbar-button:hover {
-  background-color: var(--color-shakespeare);
+  background-color: var(--color-boston-blue);
   color: var(--color-white-smoke);
 }
 
@@ -197,6 +197,16 @@ a.breadcrumb-item.active::before {
   width: 45px;
   height: 45px;
   margin: 2px;
+}
+
+.footer-header {
+  
+}
+
+.footer-text {
+  text-align: center;
+  color: var(--color-regent-st-blue);
+  font-size: small;
 }
 
 /* Footer part end */

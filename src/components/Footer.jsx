@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="container-xxl">
             <div className="row">
               <div className="col-5">
-                <h4>Our shop</h4>
+                <h4 className="section-heading">Our shop</h4>
                 <div className="footer-link d-flex flex-column">
                   <Link to="/about">About us</Link>
                   <Link to="/FAQ">FAQ</Link>
@@ -24,7 +24,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="col-5">
-                <h4>Your account</h4>
+                <h4 className="section-heading">Your account</h4>
                 <div className="footer-link d-flex flex-column">
                   <Link to="/account">Your account</Link>
                   <Link to="/cart">Cart</Link>
@@ -34,7 +34,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="col-2">
-                <h4>Follow us</h4>
+                <h4 className="section-heading">Follow us</h4>
                 <div className="social-icons">
                   <a href="https://facebook.com">
                     <FaFacebook />
@@ -55,7 +55,7 @@ const Footer = () => {
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
-              <div className="text-center">
+              <div className="footer-text">
                 &copy; {new Date().getFullYear()} - Powered by Candy Shop. All
                 rights reserved.
               </div>
