@@ -213,7 +213,7 @@ const Home = () => {
           <div className="row">
             <div className="col-12">
               <h3 className="section-heading">About our shop</h3>
-              <p>
+              <p className="text-justify">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris

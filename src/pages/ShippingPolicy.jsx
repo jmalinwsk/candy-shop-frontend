@@ -15,11 +15,11 @@ const ShippingPolicy = () => {
             <div className="col-12">
               <main>
                 <h3 id="shipping-policy">Shipping Policy</h3>
-                <p>
+                <p className="text-justify">
                   samplepage.com is committed to excellence, and the full
                   satisfaction of our customers.
                 </p>
-                <p>
+                <p className="text-justify">
                   samplepage.com proudly offers shipping services. Be assured we
                   are doing everything in our power to get your order to you as
                   soon as possible. Please consider any holidays that might
@@ -27,7 +27,7 @@ const ShippingPolicy = () => {
                   dispatch.
                 </p>
                 <h3 id="shipping-shipping">Shipping</h3>
-                <p>
+                <p className="text-justify">
                   All orders for our products are processed and shipped out in
                   4-10 business days. Orders are not shipped or delivered on
                   weekends or holidays. If we are experiencing a high volume of
@@ -37,7 +37,7 @@ const ShippingPolicy = () => {
                   contact you via email.
                 </p>
                 <h3 id="shipping-wrong-address">Wrong Address Disclaimer</h3>
-                <p>
+                <p className="text-justify">
                   It is the responsibility of the customers to make sure that
                   the shipping address entered is correct. We do our best to
                   speed up processing and shipping time, so there is always a
@@ -46,47 +46,47 @@ const ShippingPolicy = () => {
                   incorrect shipping address.
                 </p>
                 <h3 id="shipping-undeliverable-orders">Undeliverable Orders</h3>
-                <p>
+                <p className="text-justify">
                   Orders that are returned to us as undeliverable because of
                   incorrect shipping information are subject to a restocking fee
                   to be determined by us.
                 </p>
                 <h3 id="shipping-lost-package">-Lost/Stolen Packages</h3>
-                <p>
+                <p className="text-justify">
                   samplepage.com is not responsible for lost or stolen packages.
                   If your tracking information states that your package was
                   delivered to your address and you have not received it, please
                   report to the local authorities.
                 </p>
                 <h3 id="shipping-return">Return Request Days</h3>
-                <p>
+                <p className="text-justify">
                   samplepage.com allows you to return its item (s) within a
                   period of 14 days. Kindly be advised that the item (s) should
                   be returned unopened and unused.
                 </p>
                 <h3 id="shipping-out-of-stock">Out Of Stock Item Process</h3>
-                <p>
+                <p className="text-justify">
                   In case of out-of-stock, samplepage.com Wait for all items to
                   be in stock before dispatching.
                 </p>
                 <h3 id="shipping-taxes">Import Duty and Taxes</h3>
-                <p>
+                <p className="text-justify">
                   When working with samplepage.com, you have the following
                   options when it comes to taxes as well and import taxes:
                   customer will need to settle fees when arriving in destination
                   country.
                 </p>
                 <h3 id="shipping-acceptance">Acceptance</h3>
-                <p>
+                <p className="text-justify">
                   By accessing our site and placing an order you have willingly
                   accepted the terms of this Shipping Policy.
                 </p>
                 <h3 id="shipping-contact">Contact</h3>
-                <p>
+                <p className="text-justify">
                   In the event you have any questions or comments please reach
                   us via the following contacts:
                 </p>
-                <p>Email - contact@example.com</p>
+                <p className="text-justify">Email - contact@example.com</p>
               </main>
             </div>
           </div>
