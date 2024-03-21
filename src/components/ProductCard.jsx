@@ -16,30 +16,19 @@ const ProductCard = (props) => {
           <div className="wishlist-icon position-absolute">
             <FaRegHeart />
           </div>
-          <div className="product-image">
             <Link to="/store/product/:id">
               {" "}
               <img
                 src={hubbaBubbaImage}
-                className="img-fluid"
                 alt="product"
               />
             </Link>
-          </div>
           <div className="product-details">
             <Link to="/store/product/:id">
-              <h5 className="product-title">
+              <h6 className="product-title">
                 Hubba Bubba Bubble Tape Sour Blue Raspberry
-              </h5>
+              </h6>
             </Link>
-
-            <ReactStars
-              count={5}
-              value={4.5}
-              size={20}
-              isHalf={true}
-              edit={false}
-            />
             <p
               className={`product-description ${grid === 12 ? "d-block" : "d-none"}`}
             >
@@ -48,11 +37,11 @@ const ProductCard = (props) => {
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.{" "}
             </p>
-            <p className="price">$4.50 USD</p>
-            <div className="d-flex">
-              <button>Add to cart</button>
-              <button>Add to wishlist</button>
+            <p className="price-text">$4.50 USD</p>
+            <div className="text-center p-2">
+            <button >Add to cart</button>
             </div>
+              
           </div>
         </div>
       </div>
