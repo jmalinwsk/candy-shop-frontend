@@ -13,7 +13,7 @@
   --color-splash: #f5d491;
   --color-jagger: #3f3047;
   --color-white-smoke: #f8f8f8;
-  --color-whisper: #ececec;
+  --color-whisper: #E5E5E5;
   --color-nobel: #9e9e9e;
   --header-strip-background-color: #9e2f28;
   --header-upper-background-color: #c45d55;
@@ -42,7 +42,6 @@ p {
 .form-control {
   border-color: var(--color-jagger);
   border-radius: 5px;
-  transition-timing-function: linear;
   transition: border-color 0.5s;
 }
 
@@ -69,7 +68,6 @@ p {
 .logo-wrapper {
   text-align: center;
   font-family: "Borel", cursive;
-  transition-timing-function: linear;
   transition:
     background-color 1s,
     color 1s;
@@ -93,7 +91,6 @@ p {
   color: var(--color-jagger);
   font-size: 1.7rem;
   text-shadow: 2px 2px var(--color-pale-violet-red);
-  transition-timing-function: linear;
   transition: text-shadow 1s;
 }
 
@@ -104,9 +101,9 @@ p {
 .header-upper .input-group-text {
   background-color: var(--color-jagger);
   color: var(--color-white-smoke);
-  transition-timing-function: linear;
   transition: 0.1s;
-  border: var(--color-jagger) 1px;
+  border: 1px var(--color-jagger);
+  border-radius: 0px;
 }
 
 .header-upper .input-group-text svg {
@@ -117,12 +114,15 @@ p {
   background-color: var(--color-pale-violet-red);
 }
 
+.header-upper .badge {
+  color: var(--color-jagger);
+}
+
 .header-upper-links svg {
   width: 30px;
   height: 30px;
   color: var(--color-jagger);
-  transition-timing-function: linear;
-  transition: 0.1s;
+  transition: color 0.1s;
 }
 
 .header-upper-links svg:hover {
@@ -137,8 +137,7 @@ p {
   padding: 5px;
   border: none;
   border-radius: 5px;
-  transition-timing-function: linear;
-  transition: 0.1s;
+  transition: background-color 0.1s, color 0.1s;
 }
 
 .navbar-button:hover {
@@ -177,20 +176,42 @@ a.breadcrumb-item.active::before {
   margin-right: 15px;
 }
 
-.categories {
-  box-shadow: 0 0 10px var(--bssearch-background-color);
+.categories .col {
+  background-color: transparent;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid var(--color-whisper);
+  margin-right: 5px;
 }
 
-.categories div:nth-child(1),
-.categories div:nth-child(2),
-.categories div:nth-child(3),
-.categories div:nth-child(4) {
-  border-right: 1px solid;
+.categories .col:last-child {
+  margin-right: 0px;
 }
 
-.categories p {
+.categories img {
+  background-color: transparent;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.category-name-wrapper {
+  background-color: transparent;
   text-align: center;
+  margin: 5px 0 5px 0;
+
 }
+
+.category-name-wrapper p {
+  margin: 0 auto;
+  color: var(--color-jagger);
+  font-weight: bold;
+  transition: color 0.1s;
+}
+
+.category-name-wrapper p:hover {
+  color: var(--color-pale-violet-red);
+}
+
 
 /* Home part end */
 

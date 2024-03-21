@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { FaShoppingCart, FaStar, FaUser } from "react-icons/fa";
-import { LuCandy } from "react-icons/lu";
 
 const Header = () => {
   return (
@@ -46,7 +45,7 @@ const Header = () => {
                 <div>
                   <Link to="/cart">
                     <FaShoppingCart />
-                    <span className="badge badge-info">0</span>
+                    <span className="badge">0</span>
                   </Link>
                 </div>
               </div>

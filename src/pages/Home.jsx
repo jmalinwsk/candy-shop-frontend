@@ -7,6 +7,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import Meta from "../components/Meta";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -54,56 +55,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="categories-wrapper py-3">
-        <div className="container-xxl">
-          <div className="row">
-            <div className="col-12">
-              <div className="categories d-flex justify-content-between align-items-center">
-                <div className="col">
-                  <img
-                    src="images/high-angle-view-colorful-lollipops-yellow-surface.jpg"
-                    className="img-fluid rounded-4 p-2"
-                    alt="lollipops"
-                  />
-                  <p>Lollipops</p>
-                </div>
-                <div className="col">
-                  <img
-                    src="images/still-life-colorful-gummy-bears.jpg"
-                    className="img-fluid rounded-4 p-2"
-                    alt="gummy bears"
-                  />
-                  <p>Gummies</p>
-                </div>
-                <div className="col">
-                  <img
-                    src="images/zigzags-from-jelly-strips.jpg"
-                    className="img-fluid rounded-4 p-2"
-                    alt="chewing gums"
-                  />
-                  <p>Chewing gums</p>
-                </div>
-                <div className="col">
-                  <img
-                    src="images/heap-nice-candy-buttons.jpg"
-                    className="img-fluid rounded-4 p-2"
-                    alt="candies"
-                  />
-                  <p>Candies</p>
-                </div>
-                <div className="col">
-                  <img
-                    src="images/pink-soft-marshmallows.jpg"
-                    className="img-fluid rounded-4 p-2"
-                    alt="marshmallows"
-                  />
-                  <p>Marshmallows</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section className="new-wrapper py-3">
         <div className="container-xxl">
           <div className="row">
@@ -114,6 +65,73 @@ const Home = () => {
             <ProductCard className="p-0" />
             <ProductCard className="p-0" />
             <ProductCard className="p-0" />
+          </div>
+        </div>
+      </section>
+      <section className="categories-wrapper py-3">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <div className="categories d-flex justify-content-between align-items-center">
+                <div className="col">
+                <Link to="/">
+                  <img
+                    src="images/high-angle-view-colorful-lollipops-yellow-surface.jpg"
+                    alt="lollipops"
+                  />
+                  <div className="category-name-wrapper">
+                    <p>Lollipops</p>
+                  </div>
+                  </Link>
+                </div>
+                <div className="col">
+                <Link to="/">
+                <img
+                    src="images/still-life-colorful-gummy-bears.jpg"
+                    alt="gummy bears"
+                  />
+                  <div className="category-name-wrapper">
+                  <p>Gummies</p>
+                  </div>
+                </Link>
+
+                  
+                </div>
+                <div className="col">
+                <Link to="/">
+                  <img
+                    src="images/zigzags-from-jelly-strips.jpg"
+                    alt="chewing gums"
+                  />
+                  <div className="category-name-wrapper">
+                  <p>Chewing Gums</p>
+                  </div>
+                  </Link>
+                </div>
+                <div className="col">
+                <Link to="/">
+                  <img
+                    src="images/heap-nice-candy-buttons.jpg"
+                    alt="candies"
+                  />
+                  <div className="category-name-wrapper">
+                  <p>Candies</p>
+                  </div>
+                  </Link>
+                </div>
+                <div className="col">
+                <Link to="/">
+                  <img
+                    src="images/pink-soft-marshmallows.jpg"
+                    alt="marshmallows"
+                  />
+                  <div className="category-name-wrapper">
+                  <p>Marshmallows</p>
+                  </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
