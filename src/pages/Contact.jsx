@@ -15,7 +15,7 @@ const Contact = () => {
             <div className="col-12 d-flex justify-content-between">
               <div className="contact-form col-8">
                 <div>
-                  <h4>Get in touch with us</h4>
+                  <h3 className="section-heading">Get in touch with us</h3>
                   <form action="">
                     <div>
                       <input

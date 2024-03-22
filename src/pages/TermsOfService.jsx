@@ -14,19 +14,19 @@ const TermsOfService = () => {
           <div className="row">
             <div className="col-12">
               <main>
-                <h3 id="tos-terms-conditions">Terms and Conditions</h3>
+                <h3 className="section-heading" id="tos-terms-conditions">Terms and Conditions</h3>
                 <p className="text-justify">
                   Please read these terms and conditions carefully before using
                   Our Service.
                 </p>
-                <h3 id="tos-interpretation">Interpretation</h3>
+                <h3 className="section-heading" id="tos-interpretation">Interpretation</h3>
                 <p className="text-justify">
                   The words of which the initial letter is capitalized have
                   meanings defined under the following conditions. The following
                   definitions shall have the same meaning regardless of whether
                   they appear in singular or in plural.
                 </p>
-                <h3 id="tos-definitions">Definitions</h3>
+                <h3 className="section-heading" id="tos-definitions">Definitions</h3>
                 <p className="text-justify">
                   For the purposes of these Terms and Conditions:
                 </p>
@@ -110,7 +110,7 @@ const TermsOfService = () => {
                     </p>
                   </li>
                 </ul>
-                <h3 id="tos-acknowledgement">Acknowledgment</h3>
+                <h3 className="section-heading" id="tos-acknowledgement">Acknowledgment</h3>
                 <p className="text-justify">
                   These are the Terms and Conditions governing the use of this
                   Service and the agreement that operates between You and the
@@ -143,7 +143,7 @@ const TermsOfService = () => {
                   law protects You. Please read Our Privacy Policy carefully
                   before using Our Service.
                 </p>
-                <h3 id="tos-links">Links to Other Websites</h3>
+                <h3 className="section-heading" id="tos-links">Links to Other Websites</h3>
                 <p className="text-justify">
                   Our Service may contain links to third-party web sites or
                   services that are not owned or controlled by the Company.
@@ -163,7 +163,7 @@ const TermsOfService = () => {
                   privacy policies of any third-party web sites or services that
                   You visit.
                 </p>
-                <h3 id="tos-termination">Termination</h3>
+                <h3 className="section-heading" id="tos-termination">Termination</h3>
                 <p className="text-justify">
                   We may terminate or suspend Your access immediately, without
                   prior notice or liability, for any reason whatsoever,
@@ -174,7 +174,7 @@ const TermsOfService = () => {
                   Upon termination, Your right to use the Service will cease
                   immediately.
                 </p>
-                <h3 id="tos-limitations-of-liability">
+                <h3 className="section-heading" id="tos-limitations-of-liability">
                   Limitation of Liability
                 </h3>
                 <p className="text-justify">
@@ -206,7 +206,7 @@ const TermsOfService = () => {
                   not apply. In these states, each party's liability will be
                   limited to the greatest extent permitted by law.
                 </p>
-                <h3 id="tos-as-is-as-available">
+                <h3 className="section-heading" id="tos-as-is-as-available">
                   &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; Disclaimer
                 </h3>
                 <p className="text-justify">
@@ -252,26 +252,26 @@ const TermsOfService = () => {
                   applied to the greatest extent enforceable under applicable
                   law.
                 </p>
-                <h3 id="tos-governing-law">Governing Law</h3>
+                <h3 className="section-heading" id="tos-governing-law">Governing Law</h3>
                 <p className="text-justify">
                   The laws of the Country, excluding its conflicts of law rules,
                   shall govern this Terms and Your use of the Service. Your use
                   of the Application may also be subject to other local, state,
                   national, or international laws.
                 </p>
-                <h3 id="tos-disputes">Disputes Resolution</h3>
+                <h3 className="section-heading" id="tos-disputes">Disputes Resolution</h3>
                 <p className="text-justify">
                   If You have any concern or dispute about the Service, You
                   agree to first try to resolve the dispute informally by
                   contacting the Company.
                 </p>
-                <h3 id="tos-eu">For European Union (EU) Users</h3>
+                <h3 className="section-heading" id="tos-eu">For European Union (EU) Users</h3>
                 <p className="text-justify">
                   If You are a European Union consumer, you will benefit from
                   any mandatory provisions of the law of the country in which
                   You are resident.
                 </p>
-                <h3 id="tos-us">United States Legal Compliance</h3>
+                <h3 className="section-heading" id="tos-us">United States Legal Compliance</h3>
                 <p className="text-justify">
                   You represent and warrant that (i) You are not located in a
                   country that is subject to the United States government
@@ -280,8 +280,8 @@ const TermsOfService = () => {
                   (ii) You are not listed on any United States government list
                   of prohibited or restricted parties.
                 </p>
-                <h3 id="tos-severability-waiver">Severability and Waiver</h3>
-                <h4 id="tos-severability">Severability</h4>
+                <h3 className="section-heading" id="tos-severability-waiver">Severability and Waiver</h3>
+                <h4 className="subsection-heading" id="tos-severability">Severability</h4>
                 <p className="text-justify">
                   If any provision of these Terms is held to be unenforceable or
                   invalid, such provision will be changed and interpreted to
@@ -289,7 +289,7 @@ const TermsOfService = () => {
                   extent possible under applicable law and the remaining
                   provisions will continue in full force and effect.
                 </p>
-                <h4 id="tos-waiver">Waiver</h4>
+                <h4 className="subsection-heading" id="tos-waiver">Waiver</h4>
                 <p className="text-justify">
                   Except as provided herein, the failure to exercise a right or
                   to require performance of an obligation under these Terms
@@ -298,13 +298,13 @@ const TermsOfService = () => {
                   waiver of a breach constitute a waiver of any subsequent
                   breach.
                 </p>
-                <h3 id="tos-translation">Translation Interpretation</h3>
+                <h3 className="section-heading" id="tos-translation">Translation Interpretation</h3>
                 <p className="text-justify">
                   These Terms and Conditions may have been translated if We have
                   made them available to You on our Service. You agree that the
                   original English text shall prevail in the case of a dispute.
                 </p>
-                <h3 id="tos-changes">Changes to These Terms and Conditions</h3>
+                <h3 className="section-heading" id="tos-changes">Changes to These Terms and Conditions</h3>
                 <p className="text-justify">
                   We reserve the right, at Our sole discretion, to modify or
                   replace these Terms at any time. If a revision is material We
@@ -318,7 +318,7 @@ const TermsOfService = () => {
                   revised terms. If You do not agree to the new terms, in whole
                   or in part, please stop using the website and the Service.
                 </p>
-                <h3 id="tos-contact">Contact Us</h3>
+                <h3 className="section-heading" id="tos-contact">Contact Us</h3>
                 <p className="text-justify">
                   If you have any questions about these Terms and Conditions,
                   You can contact us:
