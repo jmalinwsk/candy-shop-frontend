@@ -15,10 +15,10 @@
   --color-white-smoke: #f8f8f8;
   --color-whisper: #e5e5e5;
   --color-nobel: #9e9e9e;
-  --header-strip-background-color: #9e2f28;
-  --header-upper-background-color: #c45d55;
-  --bssearch-background-color: #9e2f28;
-  --header-bottom-background-color: #a8956d;
+  /* Swiper part */
+  --swiper-pagination-color: var(--color-jagger);
+  --swiper-pagination-bullet-size: 10px;
+  /* Swiper part end */
 }
 
 body {
@@ -182,10 +182,16 @@ button:hover {
 
 .breadcrumb {
   margin: 0 auto;
+  font-size: small;
 }
+
+a.breadcrumb-item.active span {
+  color: var(--color-jagger);
+} 
 
 a.breadcrumb-item.active::before {
   content: "➜";
+  color: var(--color-jagger);
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -199,9 +205,6 @@ a.breadcrumb-item.active::before {
   margin: 2px;
 }
 
-.footer-header {
-  
-}
 
 .footer-text {
   text-align: center;
@@ -256,6 +259,14 @@ a.breadcrumb-item.active::before {
 
 .category-name-wrapper p:hover {
   color: var(--color-pale-violet-red);
+}
+
+.swiper-pagination {
+  background-color: transparent;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-jagger);
 }
 
 /* Home part end */
