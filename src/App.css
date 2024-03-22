@@ -94,6 +94,22 @@ button:hover {
   cursor: pointer;
 }
 
+.nav-list {
+  list-style: none;
+  padding: 0;
+  font-weight: bold;
+}
+
+.nav-list-child {
+  list-style: none;
+  font-weight: normal;
+}
+
+.categories-nav-list {
+  list-style: none;
+  padding: 0;
+}
+
 /* Header part */
 
 .logo-wrapper {

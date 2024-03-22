@@ -51,7 +51,7 @@ const ShippingPolicy = () => {
                   incorrect shipping information are subject to a restocking fee
                   to be determined by us.
                 </p>
-                <h3 id="shipping-lost-package">-Lost/Stolen Packages</h3>
+                <h3 id="shipping-lost-package">Lost/Stolen Packages</h3>
                 <p className="text-justify">
                   samplepage.com is not responsible for lost or stolen packages.
                   If your tracking information states that your package was

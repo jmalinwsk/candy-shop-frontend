@@ -19,8 +19,8 @@ const Store = () => {
           <div className="row">
             <div className="categories-filter-wrapper col-3 py-3">
               <div className="categories-card">
-                <h5>Categories</h5>
-                <ul>
+                <h5 className="section-heading">Categories</h5>
+                <ul className="categories-nav-list">
                   <li>Lollipops</li>
                   <li>Gummies</li>
                   <li>Chewing gums</li>
@@ -29,7 +29,7 @@ const Store = () => {
                 </ul>
               </div>
               <div className="filter-card">
-                <h5>Filters</h5>
+                <h5 className="section-heading">Filters</h5>
                 <div className="filter-availability">
                   <h6>Availability</h6>
                   <div className="form-check">
