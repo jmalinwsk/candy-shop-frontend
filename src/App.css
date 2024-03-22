@@ -79,6 +79,7 @@ button:hover {
   border-color: var(--color-jagger);
   border-radius: 5px;
   transition: border-color 0.5s;
+  
 }
 
 .form-control:focus {
@@ -97,6 +98,11 @@ button:hover {
 
 .form-select {
   cursor: pointer;
+}
+
+.form-floating > label,
+.form-floating > label::after {
+  color: var(--color-nobel);
 }
 
 .nav-list {
@@ -221,8 +227,15 @@ button:hover {
   font-size: small;
 }
 
+a.breadcrumb-item,
 a.breadcrumb-item.active span {
   color: var(--color-jagger);
+  transition: color 0.1s;
+}
+
+a.breadcrumb-item:hover, 
+a.breadcrumb-item.active span:hover {
+  color: var(--color-nobel);
 }
 
 a.breadcrumb-item.active::before {
@@ -250,8 +263,6 @@ a.breadcrumb-item.active::before {
 /* Footer part end */
 
 /* Home part */
-
-
 
 .brands img {
   margin-right: 15px;

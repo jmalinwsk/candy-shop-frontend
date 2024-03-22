@@ -8,35 +8,37 @@ const CreateAccount = () => {
     <>
       <Meta title={"Create Account - Candy Shop"} />
       <Breadcrumbs />
-      <div className="create-account-wrapper py-3">
+      <div className="create-account-wrapper py-5">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
               <div className="create-account-card col-4 m-auto">
-                <h4 className="text-center py-3">Create account</h4>
-                <div>
-                  <form action="">
+                <h4 className="section-heading">Create account</h4>
+                <div className="form-floating m-3">
                     <input
                       type="text"
-                      name="firstname"
                       className="form-control"
                       placeholder="First name"
                       required
                     />
+                    <label htmlFor="floatingInput">First name</label></div>
+                    <div className="form-floating m-3">
                     <input
                       type="text"
-                      name="lastname"
                       className="form-control"
                       placeholder="Last name"
                       required
                     />
+                    <label htmlFor="floatingInput">Last name</label></div>
+                    <div className="form-floating m-3">
                     <input
                       type="email"
-                      name="email"
                       className="form-control"
                       placeholder="E-mail"
                       required
                     />
+                    <label htmlFor="floatingInput">Last name</label></div>
+                    <div className="form-floating m-3">
                     <input
                       type="password"
                       name="password"
@@ -44,9 +46,9 @@ const CreateAccount = () => {
                       placeholder="Password"
                       required
                     />
-                  </form>
+                    <label htmlFor="floatingInput">Password</label></div>
                 </div>
-                <div>
+                <div className="d-flex justify-content-center gap-15">
                   <Link to="/create-account">
                     <button type="button">Create account</button>
                   </Link>
@@ -58,7 +60,6 @@ const CreateAccount = () => {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 };
