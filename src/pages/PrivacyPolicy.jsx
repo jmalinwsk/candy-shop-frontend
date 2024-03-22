@@ -14,7 +14,9 @@ const PrivacyPolicy = () => {
           <div className="row">
             <div className="col-12">
               <main>
-                <h3 className="section-heading" id="privacy-policy">Privacy Policy</h3>
+                <h3 className="section-heading" id="privacy-policy">
+                  Privacy Policy
+                </h3>
                 <p className="text-justify">
                   This Privacy Policy describes Our policies and procedures on
                   the collection, use and disclosure of Your information when
@@ -31,17 +33,24 @@ const PrivacyPolicy = () => {
                   </a>
                   .
                 </p>
-                <h3 className="section-heading" id="privacy-interpretation-definitions">
+                <h3
+                  className="section-heading"
+                  id="privacy-interpretation-definitions"
+                >
                   Interpretation and Definitions
                 </h3>
-                <h4 className="subsection-heading" id="privacy-interpretation">Interpretation</h4>
+                <h4 className="subsection-heading" id="privacy-interpretation">
+                  Interpretation
+                </h4>
                 <p className="text-justify">
                   The words of which the initial letter is capitalized have
                   meanings defined under the following conditions. The following
                   definitions shall have the same meaning regardless of whether
                   they appear in singular or in plural.
                 </p>
-                <h4 className="subsection-heading" id="privacy-definitions">Definitions</h4>
+                <h4 className="subsection-heading" id="privacy-definitions">
+                  Definitions
+                </h4>
                 <p className="text-justify">
                   For the purposes of this Privacy Policy:
                 </p>
@@ -128,10 +137,15 @@ const PrivacyPolicy = () => {
                     </p>
                   </li>
                 </ul>
-                <h3 className="section-heading" id="privacy-collecting-using-data">
+                <h3
+                  className="section-heading"
+                  id="privacy-collecting-using-data"
+                >
                   Collecting and Using Your Personal Data
                 </h3>
-                <h4 className="subsection-heading" id="privacy-data">Personal Data</h4>
+                <h4 className="subsection-heading" id="privacy-data">
+                  Personal Data
+                </h4>
                 <p className="text-justify">
                   While using Our Service, We may ask You to provide Us with
                   certain personally identifiable information that can be used
@@ -157,7 +171,9 @@ const PrivacyPolicy = () => {
                     <p className="text-justify">Usage Data</p>
                   </li>
                 </ul>
-                <h4 className="subsection-heading" id="privacy-usage-data">Usage Data</h4>
+                <h4 className="subsection-heading" id="privacy-usage-data">
+                  Usage Data
+                </h4>
                 <p className="text-justify">
                   Usage Data is collected automatically when using the Service.
                 </p>
@@ -181,7 +197,10 @@ const PrivacyPolicy = () => {
                   whenever You visit our Service or when You access the Service
                   by or through a mobile device.
                 </p>
-                <h4 className="subsection-heading" id="privacy-personal-data-usage">
+                <h4
+                  className="subsection-heading"
+                  id="privacy-personal-data-usage"
+                >
                   Use of Your Personal Data
                 </h4>
                 <p className="text-justify">
@@ -302,7 +321,9 @@ const PrivacyPolicy = () => {
                     consent.
                   </li>
                 </ul>
-                <h4 className="subsection-heading" id="privacy-retention">Retention of Your Personal Data</h4>
+                <h4 className="subsection-heading" id="privacy-retention">
+                  Retention of Your Personal Data
+                </h4>
                 <p className="text-justify">
                   The Company will retain Your Personal Data only for as long as
                   is necessary for the purposes set out in this Privacy Policy.
@@ -320,7 +341,9 @@ const PrivacyPolicy = () => {
                   or We are legally obligated to retain this data for longer
                   time periods.
                 </p>
-                <h4 className="subsection-heading" id="privacy-transfer">Transfer of Your Personal Data</h4>
+                <h4 className="subsection-heading" id="privacy-transfer">
+                  Transfer of Your Personal Data
+                </h4>
                 <p className="text-justify">
                   Your information, including Personal Data, is processed at the
                   Company's operating offices and in any other places where the
@@ -343,7 +366,9 @@ const PrivacyPolicy = () => {
                   adequate controls in place including the security of Your data
                   and other personal information.
                 </p>
-                <h4 className="subsection-heading" id="privacy-delete">Delete Your Personal Data</h4>
+                <h4 className="subsection-heading" id="privacy-delete">
+                  Delete Your Personal Data
+                </h4>
                 <p className="text-justify">
                   You have the right to delete or request that We assist in
                   deleting the Personal Data that We have collected about You.
@@ -368,21 +393,27 @@ const PrivacyPolicy = () => {
                 <h3 className="section-heading" id="privacy-disclosure">
                   Disclosure of Your Personal Data
                 </h3>
-                <h4 className="subsection-heading" id="privacy-transactions">Business Transactions</h4>
+                <h4 className="subsection-heading" id="privacy-transactions">
+                  Business Transactions
+                </h4>
                 <p className="text-justify">
                   If the Company is involved in a merger, acquisition or asset
                   sale, Your Personal Data may be transferred. We will provide
                   notice before Your Personal Data is transferred and becomes
                   subject to a different Privacy Policy.
                 </p>
-                <h4 className="subsection-heading" id="privacy-law-enforcement">Law enforcement</h4>
+                <h4 className="subsection-heading" id="privacy-law-enforcement">
+                  Law enforcement
+                </h4>
                 <p className="text-justify">
                   Under certain circumstances, the Company may be required to
                   disclose Your Personal Data if required to do so by law or in
                   response to valid requests by public authorities (e.g. a court
                   or a government agency).
                 </p>
-                <h4 className="subsection-heading" id="privacy-other">Other legal requirements</h4>
+                <h4 className="subsection-heading" id="privacy-other">
+                  Other legal requirements
+                </h4>
                 <p className="text-justify">
                   The Company may disclose Your Personal Data in the good faith
                   belief that such action is necessary to:
@@ -402,7 +433,9 @@ const PrivacyPolicy = () => {
                   </li>
                   <li>Protect against legal liability</li>
                 </ul>
-                <h4 className="subsection-heading" id="privacy-security">Security of Your Personal Data</h4>
+                <h4 className="subsection-heading" id="privacy-security">
+                  Security of Your Personal Data
+                </h4>
                 <p className="text-justify">
                   The security of Your Personal Data is important to Us, but
                   remember that no method of transmission over the Internet, or
@@ -410,7 +443,9 @@ const PrivacyPolicy = () => {
                   to use commercially acceptable means to protect Your Personal
                   Data, We cannot guarantee its absolute security.
                 </p>
-                <h3 className="section-heading" id="privacy-childrens-privacy">Children's Privacy</h3>
+                <h3 className="section-heading" id="privacy-childrens-privacy">
+                  Children's Privacy
+                </h3>
                 <p className="text-justify">
                   Our Service does not address anyone under the age of 13. We do
                   not knowingly collect personally identifiable information from
@@ -427,7 +462,9 @@ const PrivacyPolicy = () => {
                   parent, We may require Your parent's consent before We collect
                   and use that information.
                 </p>
-                <h3 className="section-heading" id="privacy-links">Links to Other Websites</h3>
+                <h3 className="section-heading" id="privacy-links">
+                  Links to Other Websites
+                </h3>
                 <p className="text-justify">
                   Our Service may contain links to other websites that are not
                   operated by Us. If You click on a third party link, You will
@@ -439,7 +476,9 @@ const PrivacyPolicy = () => {
                   content, privacy policies or practices of any third party
                   sites or services.
                 </p>
-                <h3 className="section-heading" id="privacy-changes">Changes to this Privacy Policy</h3>
+                <h3 className="section-heading" id="privacy-changes">
+                  Changes to this Privacy Policy
+                </h3>
                 <p className="text-justify">
                   We may update Our Privacy Policy from time to time. We will
                   notify You of any changes by posting the new Privacy Policy on
@@ -456,7 +495,9 @@ const PrivacyPolicy = () => {
                   any changes. Changes to this Privacy Policy are effective when
                   they are posted on this page.
                 </p>
-                <h3 className="section-heading" id="privacy-contact">Contact Us</h3>
+                <h3 className="section-heading" id="privacy-contact">
+                  Contact Us
+                </h3>
                 <p className="text-justify">
                   If you have any questions about this Privacy Policy, You can
                   contact us:

@@ -14,7 +14,9 @@ const Returns = () => {
           <div className="row">
             <div className="col-12">
               <main>
-                <h3 className="section-heading" id="refund-main">Return and Refund Policy</h3>
+                <h3 className="section-heading" id="refund-main">
+                  Return and Refund Policy
+                </h3>
                 <p className="text-justify">
                   Thank you for shopping at Candy Shop.
                 </p>
@@ -32,17 +34,24 @@ const Returns = () => {
                   The following terms are applicable for any products that You
                   purchased with Us.
                 </p>
-                <h3 className="section-heading" id="refund-interpretation-definitions">
+                <h3
+                  className="section-heading"
+                  id="refund-interpretation-definitions"
+                >
                   Interpretation and Definitions
                 </h3>
-                <h4 className="subsection-heading" id="refund-interpreration">Interpretation</h4>
+                <h4 className="subsection-heading" id="refund-interpreration">
+                  Interpretation
+                </h4>
                 <p className="text-justify">
                   The words of which the initial letter is capitalized have
                   meanings defined under the following conditions. The following
                   definitions shall have the same meaning regardless of whether
                   they appear in singular or in plural.
                 </p>
-                <h4 className="subsection-heading" id="refund-definitions">Definitions</h4>
+                <h4 className="subsection-heading" id="refund-definitions">
+                  Definitions
+                </h4>
                 <p className="text-justify">
                   For the purposes of this Return and Refund Policy:
                 </p>
@@ -94,7 +103,9 @@ const Returns = () => {
                     </p>
                   </li>
                 </ul>
-                <h3 className="section-heading" id="refund-rights">Your Order Cancellation Rights</h3>
+                <h3 className="section-heading" id="refund-rights">
+                  Your Order Cancellation Rights
+                </h3>
                 <p className="text-justify">
                   You are entitled to cancel Your Order within 14 days without
                   giving any reason for doing so.
@@ -119,7 +130,9 @@ const Returns = () => {
                   means of payment as You used for the Order, and You will not
                   incur any fees for such reimbursement.
                 </p>
-                <h3 className="section-heading" id="refund-conditions">Conditions for Returns</h3>
+                <h3 className="section-heading" id="refund-conditions">
+                  Conditions for Returns
+                </h3>
                 <p className="text-justify">
                   In order for the Goods to be eligible for a return, please
                   make sure that:
@@ -161,7 +174,9 @@ const Returns = () => {
                   Goods on sale cannot be refunded. This exclusion may not apply
                   to You if it is not permitted by applicable law.
                 </p>
-                <h3 className="section-heading" id="refund-returns">Returning Goods</h3>
+                <h3 className="section-heading" id="refund-returns">
+                  Returning Goods
+                </h3>
                 <p className="text-justify">
                   You are responsible for the cost and risk of returning the
                   Goods to Us. You should send the Goods at the following
@@ -179,7 +194,9 @@ const Returns = () => {
                   without actual receipt of the Goods or proof of received
                   return delivery.
                 </p>
-                <h3 className="section-heading" id="refund-gifts">Gifts</h3>
+                <h3 className="section-heading" id="refund-gifts">
+                  Gifts
+                </h3>
                 <p className="text-justify">
                   If the Goods were marked as a gift when purchased and then
                   shipped directly to you, You'll receive a gift credit for the
@@ -191,7 +208,9 @@ const Returns = () => {
                   gift giver had the Order shipped to themselves to give it to
                   You later, We will send the refund to the gift giver.
                 </p>
-                <h3 className="section-heading" id="refund-contact">Contact Us</h3>
+                <h3 className="section-heading" id="refund-contact">
+                  Contact Us
+                </h3>
                 <p className="text-justify">
                   If you have any questions about our Returns and Refunds
                   Policy, please contact us:
