@@ -8,37 +8,37 @@ const Login = () => {
     <>
       <Meta title={"Log In - Candy Shop"} />
       <Breadcrumbs />
-      <div className="login-wrapper py-3">
+      <div className="login-wrapper py-5">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">
               <div className="login-card col-4 m-auto">
-                <h4 className="text-center py-3">Login</h4>
-                <div>
-                  <form action="">
+                <h4 className="section-heading">Login</h4>
+                <div className="form-floating m-3">
                     <input
                       type="email"
-                      name="email"
                       className="form-control"
                       placeholder="E-mail"
                       required
                     />
+                    <label htmlFor="floatingInput">E-mail</label></div>
+                    <div className="form-floating m-3">
                     <input
                       type="password"
-                      name="password"
                       className="form-control"
                       placeholder="Password"
                       required
                     />
-                  </form>
+                    <label htmlFor="floatingInput">Password</label>
                 </div>
-                <div>
+                <div className="m-3">
                   <Link to="forgot-password" className="me-3">
                     Forgot your password?
                   </Link>
                 </div>
-                <div>
-                  <button type="submit">Sign in</button>
+                <div className="d-flex justify-content-center gap-15">
+                <Link to="/"><button type="submit">Sign in</button></Link>
+                  
                   <Link to="/create-account">
                     <button type="button">Create account</button>
                   </Link>
