@@ -27,7 +27,9 @@ const TermsOfService = () => {
                   they appear in singular or in plural.
                 </p>
                 <h3 id="tos-definitions">Definitions</h3>
-                <p className="text-justify">For the purposes of these Terms and Conditions:</p>
+                <p className="text-justify">
+                  For the purposes of these Terms and Conditions:
+                </p>
                 <ul>
                   <li>
                     <p className="text-justify">

@@ -15,7 +15,9 @@ const Returns = () => {
             <div className="col-12">
               <main>
                 <h3 id="refund-main">Return and Refund Policy</h3>
-                <p className="text-justify">Thank you for shopping at Candy Shop.</p>
+                <p className="text-justify">
+                  Thank you for shopping at Candy Shop.
+                </p>
                 <p className="text-justify">
                   If, for any reason, You are not completely satisfied with a
                   purchase We invite You to review our policy on refunds and
@@ -41,7 +43,9 @@ const Returns = () => {
                   they appear in singular or in plural.
                 </p>
                 <h4 id="refund-definitions">Definitions</h4>
-                <p className="text-justify">For the purposes of this Return and Refund Policy:</p>
+                <p className="text-justify">
+                  For the purposes of this Return and Refund Policy:
+                </p>
                 <ul>
                   <li>
                     <p className="text-justify">
@@ -124,7 +128,9 @@ const Returns = () => {
                   <li>The Goods were purchased in the last 14 days</li>
                   <li>The Goods are in the original packaging</li>
                 </ul>
-                <p className="text-justify">The following Goods cannot be returned:</p>
+                <p className="text-justify">
+                  The following Goods cannot be returned:
+                </p>
                 <ul>
                   <li>
                     The supply of Goods made to Your specifications or clearly

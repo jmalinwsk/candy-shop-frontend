@@ -88,10 +88,7 @@ const Home = () => {
               <div className="categories d-flex justify-content-between align-items-center">
                 <div className="col">
                   <Link to="/">
-                    <img
-                      src={lollipopsCategoryImage}
-                      alt="lollipops"
-                    />
+                    <img src={lollipopsCategoryImage} alt="lollipops" />
                     <div className="category-name-wrapper">
                       <p>Lollipops</p>
                     </div>
@@ -99,10 +96,7 @@ const Home = () => {
                 </div>
                 <div className="col">
                   <Link to="/">
-                    <img
-                      src={gummiesCategoryImage}
-                      alt="gummies"
-                    />
+                    <img src={gummiesCategoryImage} alt="gummies" />
                     <div className="category-name-wrapper">
                       <p>Gummies</p>
                     </div>
@@ -110,10 +104,7 @@ const Home = () => {
                 </div>
                 <div className="col">
                   <Link to="/">
-                    <img
-                      src={chewingGumsCategoryImage}
-                      alt="chewing gums"
-                    />
+                    <img src={chewingGumsCategoryImage} alt="chewing gums" />
                     <div className="category-name-wrapper">
                       <p>Chewing Gums</p>
                     </div>
@@ -121,10 +112,7 @@ const Home = () => {
                 </div>
                 <div className="col">
                   <Link to="/">
-                    <img
-                      src={candiesCategoryImage}
-                      alt="candies"
-                    />
+                    <img src={candiesCategoryImage} alt="candies" />
                     <div className="category-name-wrapper">
                       <p>Candies</p>
                     </div>
@@ -132,10 +120,7 @@ const Home = () => {
                 </div>
                 <div className="col">
                   <Link to="/">
-                    <img
-                      src={marshmallowsCategoryImage}
-                      alt="marshmallows"
-                    />
+                    <img src={marshmallowsCategoryImage} alt="marshmallows" />
                     <div className="category-name-wrapper">
                       <p>Marshmallows</p>
                     </div>

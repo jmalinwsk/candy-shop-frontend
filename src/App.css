@@ -6,7 +6,7 @@
 }
 
 :root {
-  --color-boston-blue: #4497AC;
+  --color-boston-blue: #4497ac;
   --color-regent-st-blue: #96c9dc;
   --color-pale-violet-red: #f06c9b;
   --color-melon: #f9b9b7;
@@ -52,7 +52,9 @@ button {
   border-radius: 5px;
   padding: 5px 10px 5px 10px;
   border: none;
-  transition: background-color 0.1s, color 0.1s;
+  transition:
+    background-color 0.1s,
+    color 0.1s;
 }
 
 button:hover {
@@ -187,7 +189,7 @@ button:hover {
 
 a.breadcrumb-item.active span {
   color: var(--color-jagger);
-} 
+}
 
 a.breadcrumb-item.active::before {
   content: "➜";
@@ -204,7 +206,6 @@ a.breadcrumb-item.active::before {
   height: 45px;
   margin: 2px;
 }
-
 
 .footer-text {
   text-align: center;

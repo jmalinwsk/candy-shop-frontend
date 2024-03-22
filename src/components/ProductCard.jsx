@@ -1,6 +1,5 @@
 import React from "react";
 import { FaRegHeart } from "react-icons/fa";
-import ReactStars from "react-rating-stars-component";
 import { Link, useLocation } from "react-router-dom";
 import hubbaBubbaImage from "../images/products/hubba-bubba-bubble-tap-sour-blue-raspberry.jpg";
 
@@ -16,13 +15,10 @@ const ProductCard = (props) => {
           <div className="wishlist-icon position-absolute">
             <FaRegHeart />
           </div>
-            <Link to="/store/product/:id">
-              {" "}
-              <img
-                src={hubbaBubbaImage}
-                alt="product"
-              />
-            </Link>
+          <Link to="/store/product/:id">
+            {" "}
+            <img src={hubbaBubbaImage} alt="product" />
+          </Link>
           <div className="product-details">
             <Link to="/store/product/:id">
               <h6 className="product-title">
@@ -39,9 +35,8 @@ const ProductCard = (props) => {
             </p>
             <p className="price-text">$4.50 USD</p>
             <div className="text-center p-2">
-            <button >Add to cart</button>
+              <button>Add to cart</button>
             </div>
-              
           </div>
         </div>
       </div>

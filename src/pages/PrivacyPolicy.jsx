@@ -42,7 +42,9 @@ const PrivacyPolicy = () => {
                   they appear in singular or in plural.
                 </p>
                 <h4 id="privacy-definitions">Definitions</h4>
-                <p className="text-justify">For the purposes of this Privacy Policy:</p>
+                <p className="text-justify">
+                  For the purposes of this Privacy Policy:
+                </p>
                 <ul>
                   <li>
                     <p className="text-justify">
@@ -147,7 +149,9 @@ const PrivacyPolicy = () => {
                     <p className="text-justify">Phone number</p>
                   </li>
                   <li>
-                    <p className="text-justify">Address, State, Province, ZIP/Postal code, City</p>
+                    <p className="text-justify">
+                      Address, State, Province, ZIP/Postal code, City
+                    </p>
                   </li>
                   <li>
                     <p className="text-justify">Usage Data</p>
