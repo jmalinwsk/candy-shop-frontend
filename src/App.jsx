@@ -17,6 +17,7 @@ import ReturnAndRefundPolicy from "./pages/ReturnAndRefundPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import ShippingPolicy from "./pages/ShippingPolicy";
 import SingleProduct from "./pages/SingleProduct";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
             <Route path="TOS" element={<TermsOfService />} />
             <Route path="shipping-policy" element={<ShippingPolicy />} />
+            <Route path="cart" element={<Cart />} />
           </Route>
         </Routes>
       </BrowserRouter>

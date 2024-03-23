@@ -255,7 +255,7 @@ a.breadcrumb-item.active::before {
 
 .footer-text {
   text-align: center;
-  color: var(--color-regent-st-blue);
+  color: var(--color-nobel);
   font-size: small;
 }
 
@@ -394,3 +394,23 @@ a.breadcrumb-item.active::before {
 }
 
 /* Wishlist part end */
+
+/* Card part */
+
+.cart-col-1 {
+  width: 60%;
+}
+
+.cart-col-2 {
+  width: 12%;
+}
+
+.cart-col-3 {
+  width: 16%;
+}
+
+.cart-col-4 {
+  width: 12%;
+}
+
+/* Cart part end */
