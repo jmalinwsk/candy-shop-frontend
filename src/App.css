@@ -359,6 +359,7 @@ a.breadcrumb-item.active::before {
 .price-text {
   text-align: center;
   margin: 0;
+  font-weight: bold;
 }
 
 /* Product card end */
@@ -395,7 +396,7 @@ a.breadcrumb-item.active::before {
 
 /* Wishlist part end */
 
-/* Card part */
+/* Cart part */
 
 .cart-col-1 {
   width: 60%;
