@@ -20,32 +20,44 @@ const Cart = () => {
                 <h4 className="section-heading cart-col-4">Total</h4>
               </div>
               <div className="cart-data py-3 d-flex justify-content-between align-items-center">
-              <div className="cart-col-1 d-flex align-items-center">
-                <div className="w-25">
-                    <img src={hubbaBubbaImage} className="rounded" alt="product" />
+                <div className="cart-col-1 d-flex align-items-center">
+                  <div className="w-25">
+                    <img
+                      src={hubbaBubbaImage}
+                      className="rounded"
+                      alt="product"
+                    />
+                  </div>
+                  <div className="w-75 ms-2">
+                    <a href="/store/product/:id">
+                      <h5>Hubba Bubba Bubble Tape Sour Blue Raspberry</h5>
+                    </a>
+                  </div>
                 </div>
-                <div className="w-75 ms-2">
-                <a href="/store/product/:id"><h5>Hubba Bubba Bubble Tape Sour Blue Raspberry</h5></a>
-                
-                    
+                <div className="cart-col-2">
+                  <p className="price-text text-start">$4.50 USD</p>
                 </div>
-              </div>
-                <div className="cart-col-2"><p className="price-text text-start">$4.50 USD</p></div>
                 <div className="cart-col-3 d-flex align-items-center">
-                <input
+                  <input
                     type="number"
                     min={1}
                     max={10}
                     className="form-control w-50"
                     defaultValue={1}
                   />
-                <FaTrash className="ms-4"/>
+                  <FaTrash className="ms-4" />
                 </div>
-                <div className="cart-col-4"><p className="price-text text-start">$4.50 USD</p></div>
+                <div className="cart-col-4">
+                  <p className="price-text text-start">$4.50 USD</p>
+                </div>
               </div>
               <div className="subtotal-chechout-wrapper d-flex flex-column align-items-end">
-                <h5 className="price-textmy-2">Subtotal: $4.50 USD</h5>
-                <button className="my-2">Checkout</button>
+                <h5 className="my-2">
+                  <strong>Subtotal:</strong> $4.50 USD
+                </h5>
+                <a href="/cart/checkout">
+                  <button className="my-2">Checkout</button>
+                </a>
               </div>
             </div>
           </div>

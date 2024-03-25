@@ -18,6 +18,7 @@ import TermsOfService from "./pages/TermsOfService";
 import ShippingPolicy from "./pages/ShippingPolicy";
 import SingleProduct from "./pages/SingleProduct";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
             <Route path="TOS" element={<TermsOfService />} />
             <Route path="shipping-policy" element={<ShippingPolicy />} />
             <Route path="cart" element={<Cart />} />
+            <Route path="cart/checkout" element={<Checkout />} />
           </Route>
         </Routes>
       </BrowserRouter>
