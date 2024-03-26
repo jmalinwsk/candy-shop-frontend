@@ -2,16 +2,15 @@ import React from "react";
 import Meta from "../components/Meta";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Link } from "react-router-dom";
+import SectionContainer from "../components/SectionContainer";
 
 const Login = () => {
   return (
     <>
       <Meta title={"Log In - Candy Shop"} />
       <Breadcrumbs />
-      <div className="login-wrapper py-5">
-        <div className="container-xxl">
-          <div className="row">
-            <div className="col-12">
+      <SectionContainer className="login-wrapper py-5">
+      <div className="col-12">
               <div className="login-card col-4 m-auto">
                 <h4 className="section-heading">Login</h4>
                 <div className="form-floating m-3">
@@ -48,9 +47,7 @@ const Login = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+      </SectionContainer>
     </>
   );
 };

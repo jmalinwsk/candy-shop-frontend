@@ -1,12 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
+import SectionContainer from "./SectionContainer";
 
 const useHeadingsData = () => {
   const [nestedHeadings, setNestedHeadings] = useState([]);
 
   useEffect(() => {
-    const headingElements = Array.from(
-      document.querySelectorAll("main h3, main h4"),
-    );
+    const headingElements = Array.from(document.querySelectorAll("h3, h4"));
 
     const newNestedHeadings = getNestedHeadings(headingElements);
     setNestedHeadings(newNestedHeadings);
@@ -119,15 +118,13 @@ const TableOfContents = () => {
   const { nestedHeadings } = useHeadingsData();
   useIntersectionObserver(setActiveId);
   return (
-    <div className="container-xxl py-3">
-      <div className="row">
+    <SectionContainer className="container-xxl py-3">
         <div className="col-12">
           <nav aria-label="Table of contents">
             <Headings headings={nestedHeadings} activeId={activeId} />
           </nav>
         </div>
-      </div>
-    </div>
+    </SectionContainer>
   );
 };
 

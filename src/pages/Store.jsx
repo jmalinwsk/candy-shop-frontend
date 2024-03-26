@@ -7,6 +7,7 @@ import {
 import Breadcrumbs from "../components/Breadcrumbs";
 import Meta from "../components/Meta";
 import ProductCard from "../components/ProductCard";
+import SectionContainer from "../components/SectionContainer";
 
 const Store = () => {
   const [grid, setGrid] = useState(3);
@@ -14,10 +15,8 @@ const Store = () => {
     <>
       <Meta title={"Store - Candy Shop"} />
       <Breadcrumbs />
-      <div className="store-wrapper">
-        <div className="container-xxl">
-          <div className="row">
-            <div className="categories-filter-wrapper col-3 py-3">
+      <SectionContainer className="store-wrapper py-3">
+      <div className="categories-filter-wrapper col-3 py-3">
               <div className="categories-card">
                 <h5 className="section-heading">Categories</h5>
                 <ul className="categories-nav-list">
@@ -176,9 +175,7 @@ const Store = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+      </SectionContainer>
     </>
   );
 };

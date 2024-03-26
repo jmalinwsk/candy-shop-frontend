@@ -2,6 +2,7 @@ import React from "react";
 import Breadcrumbs from "../components/Breadcrumbs";
 import Meta from "../components/Meta";
 import TableOfContents from "../components/TableOfContents";
+import SectionContainer from "../components/SectionContainer";
 
 const PrivacyPolicy = () => {
   return (
@@ -9,11 +10,9 @@ const PrivacyPolicy = () => {
       <Meta title={"Privacy Policy - Candy Shop"} />
       <Breadcrumbs />
       <TableOfContents />
-      <div className="privacy-policy-wrapper py-3">
-        <div className="container-xxl">
-          <div className="row">
-            <div className="col-12">
-              <main>
+      <SectionContainer className="privacy-policy-wrapper py-3">
+      <div className="col-12">
+              
                 <h3 className="section-heading" id="privacy-policy">
                   Privacy Policy
                 </h3>
@@ -505,11 +504,9 @@ const PrivacyPolicy = () => {
                 <ul>
                   <li>By email: contact@example.com</li>
                 </ul>
-              </main>
+              
             </div>
-          </div>
-        </div>
-      </div>
+      </SectionContainer>
     </>
   );
 };

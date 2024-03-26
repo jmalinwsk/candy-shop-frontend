@@ -2,16 +2,15 @@ import React from "react";
 import Meta from "../components/Meta";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Link } from "react-router-dom";
+import SectionContainer from "../components/SectionContainer";
 
 const ForgotPassword = () => {
   return (
     <>
       <Meta title={"Forgot Your Password? - Candy Shop"} />
       <Breadcrumbs />
-      <div className="reset-password-wrapper py-5">
-        <div className="container-xxl">
-          <div className="row">
-            <div className="col-12">
+      <SectionContainer className="reset-password-wrapper py-5">
+      <div className="col-12">
               <div className="reset-password-card col-4 m-auto">
                 <h4 className="section-heading">Forgot your password?</h4>
                 <p className="m-3 small">
@@ -37,9 +36,7 @@ const ForgotPassword = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+      </SectionContainer>
     </>
   );
 };
