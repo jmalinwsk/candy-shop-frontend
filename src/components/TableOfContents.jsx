@@ -119,11 +119,11 @@ const TableOfContents = () => {
   useIntersectionObserver(setActiveId);
   return (
     <SectionContainer className="container-xxl py-3">
-        <div className="col-12">
-          <nav aria-label="Table of contents">
-            <Headings headings={nestedHeadings} activeId={activeId} />
-          </nav>
-        </div>
+      <div className="col-12">
+        <nav aria-label="Table of contents">
+          <Headings headings={nestedHeadings} activeId={activeId} />
+        </nav>
+      </div>
     </SectionContainer>
   );
 };
