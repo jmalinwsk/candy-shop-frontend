@@ -3,6 +3,7 @@ import Meta from "../components/Meta";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import SectionContainer from "../components/SectionContainer";
+import CustomInput from "../components/CustomInput";
 
 const Login = () => {
   return (
@@ -13,24 +14,20 @@ const Login = () => {
         <div className="col-12">
           <div className="login-card col-4 m-auto">
             <h4 className="section-heading">Login</h4>
-            <div className="form-floating m-3">
-              <input
-                type="email"
-                className="form-control"
-                placeholder="E-mail"
-                required
-              />
-              <label htmlFor="floatingInput">E-mail</label>
-            </div>
-            <div className="form-floating m-3">
-              <input
-                type="password"
-                className="form-control"
-                placeholder="Password"
-                required
-              />
-              <label htmlFor="floatingInput">Password</label>
-            </div>
+            <CustomInput
+              divClassName="form-floating m-3"
+              type="email"
+              className="form-control"
+              placeholder="E-mail"
+              isRequired={true}
+            />
+            <CustomInput
+              divClassName="form-floating m-3"
+              type="passwword"
+              className="form-control"
+              placeholder="Password"
+              isRequired={true}
+            />
             <div className="m-3">
               <Link to="forgot-password" className="me-3">
                 Forgot your password?

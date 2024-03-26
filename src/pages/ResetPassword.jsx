@@ -2,6 +2,7 @@ import React from "react";
 import Meta from "../components/Meta";
 import Breadcrumbs from "../components/Breadcrumbs";
 import SectionContainer from "../components/SectionContainer";
+import CustomInput from "../components/CustomInput";
 
 const ResetPassword = () => {
   return (
@@ -12,24 +13,20 @@ const ResetPassword = () => {
         <div className="col-12">
           <div className="reset-password-card col-4 m-auto">
             <h4 className="text-center py-3">Reset your password</h4>
-            <div>
-              <form action="">
-                <input
-                  type="password"
-                  name="password"
-                  className="form-control"
-                  placeholder="New password"
-                  required
-                />
-                <input
-                  type="password"
-                  name="password"
-                  className="form-control"
-                  placeholder="Repeat new password"
-                  required
-                />
-              </form>
-            </div>
+            <CustomInput
+              divClassName="form-floating m-3"
+              type="password"
+              className="form-control"
+              placeholder="New password"
+              isRequired={true}
+            />{" "}
+            <CustomInput
+              divClassName="form-floating m-3"
+              type="password"
+              className="form-control"
+              placeholder="Repeat new password"
+              isRequired={true}
+            />
             <div>
               <button type="button">Submit</button>
             </div>

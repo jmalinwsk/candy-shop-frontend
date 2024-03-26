@@ -3,6 +3,7 @@ import Meta from "../components/Meta";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import SectionContainer from "../components/SectionContainer";
+import CustomInput from "../components/CustomInput";
 
 const CreateAccount = () => {
   return (
@@ -13,43 +14,34 @@ const CreateAccount = () => {
         <div className="col-12">
           <div className="create-account-card col-4 m-auto">
             <h4 className="section-heading">Create account</h4>
-            <div className="form-floating m-3">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="First name"
-                required
-              />
-              <label htmlFor="floatingInput">First name</label>
-            </div>
-            <div className="form-floating m-3">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Last name"
-                required
-              />
-              <label htmlFor="floatingInput">Last name</label>
-            </div>
-            <div className="form-floating m-3">
-              <input
-                type="email"
-                className="form-control"
-                placeholder="E-mail"
-                required
-              />
-              <label htmlFor="floatingInput">Last name</label>
-            </div>
-            <div className="form-floating m-3">
-              <input
-                type="password"
-                name="password"
-                className="form-control"
-                placeholder="Password"
-                required
-              />
-              <label htmlFor="floatingInput">Password</label>
-            </div>
+            <CustomInput
+              divClassName="form-floating m-3"
+              type="text"
+              className="form-control"
+              placeholder="First name"
+              isRequired={true}
+            />
+            <CustomInput
+              divClassName="form-floating m-3"
+              type="text"
+              className="form-control"
+              placeholder="Last name"
+              isRequired={true}
+            />
+            <CustomInput
+              divClassName="form-floating m-3"
+              type="text"
+              className="form-control"
+              placeholder="E-mail"
+              isRequired={true}
+            />
+            <CustomInput
+              divClassName="form-floating m-3"
+              type="password"
+              className="form-control"
+              placeholder="Password"
+              isRequired={true}
+            />
           </div>
           <div className="d-flex justify-content-center gap-15">
             <Link to="/create-account">

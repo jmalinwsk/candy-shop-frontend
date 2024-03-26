@@ -8,6 +8,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import Meta from "../components/Meta";
 import ProductCard from "../components/ProductCard";
 import SectionContainer from "../components/SectionContainer";
+import CustomInput from "../components/CustomInput";
 
 const Store = () => {
   const [grid, setGrid] = useState(3);
@@ -108,26 +109,22 @@ const Store = () => {
               <h6>Price</h6>
               <div className="row g-2">
                 <div className="col-md">
-                  <div className="form-floating">
-                    <input
-                      type="email"
-                      className="form-control"
-                      id=""
-                      placeholder="From"
-                    />
-                    <label htmlFor="floatingInput">From</label>
-                  </div>
+                  <CustomInput
+                    divClassName="form-floating"
+                    type="text"
+                    className="form-control"
+                    placeholder="From"
+                    isRequired={false}
+                  />
                 </div>
                 <div className="col-md">
-                  <div className="form-floating">
-                    <input
-                      type="email"
-                      className="form-control"
-                      id=""
-                      placeholder="To"
-                    />
-                    <label htmlFor="floatingInput">To</label>
-                  </div>
+                  <CustomInput
+                    divClassName="form-floating"
+                    type="text"
+                    className="form-control"
+                    placeholder="To"
+                    isRequired={false}
+                  />
                 </div>
               </div>
             </div>

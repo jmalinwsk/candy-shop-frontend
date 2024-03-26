@@ -4,6 +4,7 @@ import { FaInfo, FaPhone } from "react-icons/fa";
 import Meta from "../components/Meta";
 import Breadcrumbs from "../components/Breadcrumbs";
 import SectionContainer from "../components/SectionContainer";
+import CustomInput from "../components/CustomInput";
 
 const Contact = () => {
   return (
@@ -16,22 +17,20 @@ const Contact = () => {
             <div>
               <h3 className="section-heading">Get in touch with us</h3>
               <form action="">
-                <div>
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Name"
-                    required
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    className="form-control"
-                    placeholder="E-mail"
-                    required
-                  />
-                </div>
+                <CustomInput
+                  divClassName="form-floating"
+                  type="text"
+                  className="form-control"
+                  placeholder="Voucher"
+                  isRequired={true}
+                />
+                <CustomInput
+                  divClassName="form-floating"
+                  type="text"
+                  className="form-control"
+                  placeholder="E-mail"
+                  isRequired={true}
+                />
 
                 <div>
                   <textarea

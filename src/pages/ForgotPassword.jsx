@@ -3,6 +3,7 @@ import Meta from "../components/Meta";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import SectionContainer from "../components/SectionContainer";
+import CustomInput from "../components/CustomInput";
 
 const ForgotPassword = () => {
   return (
@@ -17,17 +18,13 @@ const ForgotPassword = () => {
               We will send you an e-mail with instructions on how to reset your
               password.
             </p>
-            <div className="form-floating m-3">
-              <form action="">
-                <input
-                  type="email"
-                  name="email"
-                  className="form-control"
-                  placeholder="E-mail"
-                  required
-                />
-              </form>
-            </div>
+            <CustomInput
+              divClassName="form-floating m-3"
+              type="email"
+              className="form-control"
+              placeholder="E-mail"
+              isRequired={true}
+            />
             <div className="d-flex justify-content-center gap-15">
               <button type="submit">Submit</button>
               <Link to="/login">
