@@ -7,7 +7,7 @@ const About = () => {
       <SectionContainer className="about-wrapper py-3">
         <div className="col-12">
         <h3 className="section-heading">About us</h3>
-        <p className="text-justify">
+            <p className="text-justify">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

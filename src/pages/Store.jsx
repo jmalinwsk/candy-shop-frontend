@@ -20,7 +20,7 @@ const Store = () => {
         <div className="categories-filter-wrapper col-3 py-3">
           <div className="categories-card">
             <h5 className="section-heading">Categories</h5>
-            <ul className="categories-nav-list">
+            <ul className="nav-list">
               <li>Lollipops</li>
               <li>Gummies</li>
               <li>Chewing gums</li>

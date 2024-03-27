@@ -33,7 +33,7 @@ const getNestedHeadings = (headingElements) => {
 };
 
 const Headings = ({ headings, activeId }) => (
-  <ul className="nav-list">
+  <ul className="nav-list-bold">
     {headings.map((heading) => (
       <li key={heading.id} className={heading.id === activeId ? "active" : ""}>
         <a

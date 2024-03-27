@@ -104,7 +104,7 @@ button:hover {
   color: var(--color-nobel);
 }
 
-.nav-list {
+.nav-list-bold {
   list-style: none;
   padding: 0;
   font-weight: bold;
@@ -115,7 +115,7 @@ button:hover {
   font-weight: normal;
 }
 
-.categories-nav-list {
+.nav-list {
   list-style: none;
   padding: 0;
 }
@@ -380,6 +380,10 @@ a.breadcrumb-item.active::before {
 /* Store part end */
 
 /* Contact part */
+
+.contact-wrapper svg {
+  color: var(--color-jagger)
+}
 
 /* Contact part end */
 
