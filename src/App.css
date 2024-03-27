@@ -67,11 +67,11 @@ button:hover {
   color: var(--color-jagger);
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   cursor: pointer;
 }
 
-input[type=checkbox]:checked {
+input[type="checkbox"]:checked {
   background-color: var(--color-jagger);
 }
 
@@ -396,7 +396,7 @@ a.breadcrumb-item.active::before {
 /* Contact part */
 
 .contact-wrapper svg {
-  color: var(--color-jagger)
+  color: var(--color-jagger);
 }
 
 /* Contact part end */

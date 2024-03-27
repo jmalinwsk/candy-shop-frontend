@@ -22,17 +22,29 @@ const Store = () => {
           <div className="categories-card pb-2">
             <h5 className="section-heading">Categories</h5>
             <ul className="nav-list">
-              <li><Link to="/">Lollipops</Link></li>
-              <li><Link to="/">Gummies</Link></li>
-              <li><Link to="/">Chewing gums</Link></li>
-              <li><Link to="/">Candies</Link></li>
-              <li><Link to="/">Marshmallows</Link></li>
+              <li>
+                <Link to="/">Lollipops</Link>
+              </li>
+              <li>
+                <Link to="/">Gummies</Link>
+              </li>
+              <li>
+                <Link to="/">Chewing gums</Link>
+              </li>
+              <li>
+                <Link to="/">Candies</Link>
+              </li>
+              <li>
+                <Link to="/">Marshmallows</Link>
+              </li>
             </ul>
           </div>
           <div className="filter-card">
             <h5 className="section-heading">Filters</h5>
             <div className="filter-availability pb-2">
-              <h6><strong>Availability</strong></h6>
+              <h6>
+                <strong>Availability</strong>
+              </h6>
               <div className="form-check">
                 <input
                   className="form-check-input"
@@ -57,7 +69,9 @@ const Store = () => {
               </div>
             </div>
             <div className="filter-brand pb-2">
-              <h6><strong>Brand</strong></h6>
+              <h6>
+                <strong>Brand</strong>
+              </h6>
               <div className="form-check">
                 <input
                   className="form-check-input"
@@ -82,7 +96,9 @@ const Store = () => {
               </div>
             </div>
             <div className="filter-flavor pb-2">
-              <h6><strong>Flavor</strong></h6>
+              <h6>
+                <strong>Flavor</strong>
+              </h6>
               <div className="form-check">
                 <input
                   className="form-check-input"
@@ -107,7 +123,9 @@ const Store = () => {
               </div>
             </div>
             <div className="filter-price pb-2">
-              <h6><strong>Price</strong></h6>
+              <h6>
+                <strong>Price</strong>
+              </h6>
               <div className="row g-2">
                 <div className="col-md">
                   <CustomInput
@@ -130,9 +148,8 @@ const Store = () => {
               </div>
             </div>
             <div className="py-2">
-            <button>Submit</button>
+              <button>Submit</button>
             </div>
-            
           </div>
         </div>
         <div className="col-9 py-3">
