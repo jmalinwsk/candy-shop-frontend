@@ -9,6 +9,7 @@ import Meta from "../components/Meta";
 import ProductCard from "../components/ProductCard";
 import SectionContainer from "../components/SectionContainer";
 import CustomInput from "../components/CustomInput";
+import { Link } from "react-router-dom";
 
 const Store = () => {
   const [grid, setGrid] = useState(3);
@@ -18,20 +19,20 @@ const Store = () => {
       <Breadcrumbs />
       <SectionContainer className="store-wrapper py-3">
         <div className="categories-filter-wrapper col-3 py-3">
-          <div className="categories-card">
+          <div className="categories-card pb-2">
             <h5 className="section-heading">Categories</h5>
             <ul className="nav-list">
-              <li>Lollipops</li>
-              <li>Gummies</li>
-              <li>Chewing gums</li>
-              <li>Candies</li>
-              <li>Marshmallows</li>
+              <li><Link to="/">Lollipops</Link></li>
+              <li><Link to="/">Gummies</Link></li>
+              <li><Link to="/">Chewing gums</Link></li>
+              <li><Link to="/">Candies</Link></li>
+              <li><Link to="/">Marshmallows</Link></li>
             </ul>
           </div>
           <div className="filter-card">
             <h5 className="section-heading">Filters</h5>
-            <div className="filter-availability">
-              <h6>Availability</h6>
+            <div className="filter-availability pb-2">
+              <h6><strong>Availability</strong></h6>
               <div className="form-check">
                 <input
                   className="form-check-input"
@@ -55,8 +56,8 @@ const Store = () => {
                 </label>
               </div>
             </div>
-            <div className="filter-brand">
-              <h6>Brand</h6>
+            <div className="filter-brand pb-2">
+              <h6><strong>Brand</strong></h6>
               <div className="form-check">
                 <input
                   className="form-check-input"
@@ -80,8 +81,8 @@ const Store = () => {
                 </label>
               </div>
             </div>
-            <div className="filter-flavor">
-              <h6>Flavor</h6>
+            <div className="filter-flavor pb-2">
+              <h6><strong>Flavor</strong></h6>
               <div className="form-check">
                 <input
                   className="form-check-input"
@@ -105,12 +106,12 @@ const Store = () => {
                 </label>
               </div>
             </div>
-            <div className="filter-price">
-              <h6>Price</h6>
+            <div className="filter-price pb-2">
+              <h6><strong>Price</strong></h6>
               <div className="row g-2">
                 <div className="col-md">
                   <CustomInput
-                    divClassName="form-floating"
+                    divClassName="form-floating me-2"
                     type="text"
                     className="form-control"
                     placeholder="From"
@@ -119,7 +120,7 @@ const Store = () => {
                 </div>
                 <div className="col-md">
                   <CustomInput
-                    divClassName="form-floating"
+                    divClassName="form-floating ms-2"
                     type="text"
                     className="form-control"
                     placeholder="To"
@@ -128,13 +129,16 @@ const Store = () => {
                 </div>
               </div>
             </div>
+            <div className="py-2">
             <button>Submit</button>
+            </div>
+            
           </div>
         </div>
         <div className="col-9 py-3">
           <div className="sort-view-wrapper d-flex align-items-center">
             <div className="d-flex align-items-center">
-              <p className="mb-0">30 Products</p>
+              <p className="mb-0 small">30 Products</p>
             </div>
             <div className="sort-by d-flex ms-auto align-items-center">
               <p className="d-block w-0 text-center m-auto">Sort by:</p>

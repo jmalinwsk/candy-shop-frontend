@@ -67,6 +67,14 @@ button:hover {
   color: var(--color-jagger);
 }
 
+input[type=checkbox] {
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked {
+  background-color: var(--color-jagger);
+}
+
 .text-justify {
   text-align: justify;
 }
@@ -375,6 +383,12 @@ a.breadcrumb-item.active::before {
   height: 25px;
   margin-left: 5px;
   cursor: pointer;
+  color: var(--color-jagger);
+  transition: color 0.1s;
+}
+
+.products-view-change svg:hover {
+  color: var(--color-pale-violet-red);
 }
 
 /* Store part end */

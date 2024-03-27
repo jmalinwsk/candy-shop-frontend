@@ -19,7 +19,7 @@ const ProductCard = (props) => {
             {" "}
             <img src={hubbaBubbaImage} alt="product" />
           </Link>
-          <div className="product-details">
+          <div className="product-details text-center">
             <Link to="/store/product/:id">
               <h6 className="product-title">
                 Hubba Bubba Bubble Tape Sour Blue Raspberry
