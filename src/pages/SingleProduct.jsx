@@ -18,32 +18,30 @@ const SingleProduct = () => {
                 <div className="image-wrapper p-1">
                   <img
                     src={hubbaBubbaImage}
-                    className="img-fluid"
+                    className="rounded-3"
                     alt="product"
                   />
                 </div>
               </div>
               <div className="col-6">
                 <div className="details-wrapper p-1">
-                  <h4>Hubba Bubba Bubble Tape Sour Blue Raspberry</h4>
-                  <h5>$4.50 USD</h5>
-                  <div className="d-flex align-items-center gap-15 border-bottom">
-                    <ReactStars
-                      count={5}
-                      value={4.5}
-                      size={20}
-                      isHalf={true}
-                      edit={false}
-                    />
-                    <p className="m-0">(2 reviews)</p>
-                  </div>
-                  <h5>Availability: </h5>
+                  <h4 className="section-heading">
+                    Hubba Bubba Bubble Tape Sour Blue Raspberry
+                  </h4>
+                  <h5 className="mb-4">$4.50 USD</h5>
+                  <h5>
+                    <strong>Availability</strong>
+                  </h5>
                   <p>in stock</p>
-                  <h5>Brand: </h5>
+                  <h5>
+                    <strong>Brand</strong>
+                  </h5>
                   <p>Hubba Bubba</p>
-                  <h5>Categories: </h5>
+                  <h5>
+                    <strong>Tags</strong>
+                  </h5>
                   <p>sour</p>
-                  <p>
+                  <p className="text-justify my-4">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id
                     ipsam possimus similique obcaecati, quidem reprehenderit
                     voluptate reiciendis ullam mollitia fuga enim hic! Eligendi
@@ -51,25 +49,25 @@ const SingleProduct = () => {
                   </p>
                 </div>
                 <div></div>
-                <div className="d-flex gap-15">
-                  <input
-                    type="number"
-                    min={1}
-                    max={10}
-                    className="form-control"
-                    defaultValue={1}
-                  />
-                  <button>Add to cart</button>
-                  <button>Add to wishlist</button>
-                </div>
+                <div className="d-flex align-items-center">
+                    <button className="me-auto">Add to wishlist</button>
+                    <input
+                      type="number"
+                      min={1}
+                      max={10}
+                      className="form-control w-25 me-2"
+                      defaultValue={1}
+                    />
+                    <button>Add to cart</button>
+                  </div>
               </div>
             </div>
           </div>
-          <div className="reviews-wrapper py-1">
+          <div className="reviews-wrapper py-3">
             <div className="row">
               <div className="col-12">
-                <h4>Reviews</h4>
-                <div className="d-flex align-items-center gap-15 border-bottom">
+                <h4 className="section-heading">Reviews</h4>
+                <div className="d-flex align-items-center gap-15 py-3">
                   <ReactStars
                     count={5}
                     value={4.5}
@@ -77,7 +75,7 @@ const SingleProduct = () => {
                     isHalf={true}
                     edit={false}
                   />
-                  <p className="m-0">Based on 2 reviews</p>
+                  <p className="m-0 small">Based on 2 reviews</p>
                 </div>
                 <div>
                   <div className="review-wrapper">
@@ -92,7 +90,7 @@ const SingleProduct = () => {
                       />
                     </div>
                     <div>
-                      <p>Great product!</p>
+                      <p className="small">Great product!</p>
                     </div>
                   </div>
                 </div>
@@ -100,12 +98,12 @@ const SingleProduct = () => {
             </div>
           </div>
           {orderedProduct && (
-            <div className="review-form-wrapper py-1">
+            <div className="review-form-wrapper py-3">
               <div className="row">
                 <div className="col-12">
-                  <h4>Write a review</h4>
+                  <h4 className="section-heading">Write a review</h4>
                   <div className="d-flex align-items-center gap-15">
-                    <p className="m-0">Your rating</p>
+                    <p className="m-0 small">Your rating</p>
                     <ReactStars
                       count={5}
                       value={4.5}
