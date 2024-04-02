@@ -50,16 +50,16 @@ const SingleProduct = () => {
                 </div>
                 <div></div>
                 <div className="d-flex align-items-center">
-                    <button className="me-auto">Add to wishlist</button>
-                    <input
-                      type="number"
-                      min={1}
-                      max={10}
-                      className="form-control w-25 me-2"
-                      defaultValue={1}
-                    />
-                    <button>Add to cart</button>
-                  </div>
+                  <button className="me-auto">Add to wishlist</button>
+                  <input
+                    type="number"
+                    min={1}
+                    max={10}
+                    className="form-control w-25 me-2"
+                    defaultValue={1}
+                  />
+                  <button>Add to cart</button>
+                </div>
               </div>
             </div>
           </div>

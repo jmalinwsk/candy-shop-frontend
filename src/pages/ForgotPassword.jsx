@@ -10,9 +10,9 @@ const ForgotPassword = () => {
     <>
       <Meta title={"Forgot Your Password? - Candy Shop"} />
       <Breadcrumbs />
-      <SectionContainer className="reset-password-wrapper py-5">
+      <SectionContainer className="forgot-password-wrapper py-5">
         <div className="col-12">
-          <div className="reset-password-card col-4 m-auto">
+          <div className="forgot-password-card col-4 m-auto">
             <h4 className="section-heading">Forgot your password?</h4>
             <p className="m-3 small">
               We will send you an e-mail with instructions on how to reset your
