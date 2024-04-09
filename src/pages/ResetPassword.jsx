@@ -19,14 +19,12 @@ const ResetPassword = () => {
               type="password"
               className="form-control"
               placeholder="New password"
-              isRequired={true}
             />
             <CustomInput
               divClassName="form-floating m-3"
               type="password"
               className="form-control"
               placeholder="Repeat new password"
-              isRequired={true}
             />
             <div className="d-flex justify-content-center">
               <Link to="/">

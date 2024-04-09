@@ -21,14 +21,12 @@ const Contact = () => {
                 type="text"
                 className="form-control"
                 placeholder="Voucher"
-                isRequired={true}
               />
               <CustomInput
                 divClassName="form-floating m-3"
                 type="text"
                 className="form-control"
                 placeholder="E-mail"
-                isRequired={true}
               />
 
               <div className="m-3">

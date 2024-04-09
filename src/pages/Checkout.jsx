@@ -19,28 +19,24 @@ const Checkout = () => {
               type="text"
               className="form-control"
               placeholder="First name"
-              isRequired={true}
             />
             <CustomInput
               divClassName="form-floating m-3"
               type="text"
               className="form-control"
               placeholder="Last name"
-              isRequired={true}
             />
             <CustomInput
               divClassName="form-floating m-3"
               type="text"
               className="form-control"
               placeholder="Address"
-              isRequired={true}
             />
             <CustomInput
               divClassName="form-floating m-3"
               type="text"
               className="form-control"
               placeholder="Apartment, Suite, etc."
-              isRequired={true}
             />
 
             <div className="d-flex m-3">
@@ -49,14 +45,12 @@ const Checkout = () => {
                 type="text"
                 className="form-control"
                 placeholder="City"
-                isRequired={true}
               />
               <CustomInput
                 divClassName="form-floating m-3"
                 type="text"
                 className="form-control"
                 placeholder="Zipcode"
-                isRequired={true}
               />
             </div>
             <div className="d-flex justify-content-left py-3">
@@ -90,7 +84,6 @@ const Checkout = () => {
               type="text"
               className="form-control"
               placeholder="Voucher"
-              isRequired={false}
             />
             <div className="d-flex justify-content-between align-items-center border-top py-3 mt-3">
               <h4 className="m-0">

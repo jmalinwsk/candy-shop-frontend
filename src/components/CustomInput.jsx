@@ -7,7 +7,6 @@ const CustomInput = (props) => {
     name,
     placeholder,
     className,
-    isRequired,
     value,
     onChange,
     onBlur,
@@ -19,7 +18,6 @@ const CustomInput = (props) => {
         name={name}
         placeholder={placeholder}
         className={`${className}`}
-        required={isRequired}
         value={value}
         onChange={onChange}
         onBlur={onBlur}

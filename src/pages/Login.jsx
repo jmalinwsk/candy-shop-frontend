@@ -45,14 +45,15 @@ const Login = () => {
       <Breadcrumbs />
       <SectionContainer className="login-wrapper py-5">
         <div className="col-12">
-          <div className="login-card col-4 m-auto">
-            <h4 className="section-heading">Login</h4>
-            <div className="mx-3 text-danger small">
-              {message.message === "Rejected"
-                ? "Your login or password may be wrong, please try again."
-                : ""}
-            </div>
-            <form action="" onSubmit={formik.handleSubmit}>
+          <form action="" onSubmit={formik.handleSubmit}>
+            <div className="login-card col-4 m-auto">
+              <h4 className="section-heading">Login</h4>
+              <div className="text-danger small">
+                {message.message === "Rejected"
+                  ? "Your login or password may be wrong, please try again."
+                  : ""}
+              </div>
+
               <CustomInput
                 divClassName="form-floating m-3"
                 type="email"
@@ -95,8 +96,8 @@ const Login = () => {
                   <button type="submit">Create account</button>
                 </Link>
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
       </SectionContainer>
     </>

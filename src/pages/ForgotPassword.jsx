@@ -23,7 +23,6 @@ const ForgotPassword = () => {
               type="email"
               className="form-control"
               placeholder="E-mail"
-              isRequired={true}
             />
             <div className="d-flex justify-content-center gap-15">
               <button type="submit">Submit</button>

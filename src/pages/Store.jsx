@@ -133,7 +133,6 @@ const Store = () => {
                     type="text"
                     className="form-control"
                     placeholder="From"
-                    isRequired={false}
                   />
                 </div>
                 <div className="col-md">
@@ -142,7 +141,6 @@ const Store = () => {
                     type="text"
                     className="form-control"
                     placeholder="To"
-                    isRequired={false}
                   />
                 </div>
               </div>
