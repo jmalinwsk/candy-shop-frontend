@@ -48,7 +48,9 @@ const Login = () => {
           <div className="login-card col-4 m-auto">
             <h4 className="section-heading">Login</h4>
             <div className="mx-3 text-danger small">
-              {message.message === "Rejected" ? "Your login or password may be wrong, please try again." : ""}
+              {message.message === "Rejected"
+                ? "Your login or password may be wrong, please try again."
+                : ""}
             </div>
             <form action="" onSubmit={formik.handleSubmit}>
               <CustomInput

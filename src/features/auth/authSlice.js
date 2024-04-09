@@ -1,7 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import authService from "./authService";
 
-const getUserFromLocalStorage = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : null;
+const getUserFromLocalStorage = localStorage.getItem("user")
+  ? JSON.parse(localStorage.getItem("user"))
+  : null;
 
 const initialState = {
   user: getUserFromLocalStorage,
@@ -19,19 +21,16 @@ export const registerUser = createAsyncThunk(
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
-  }
-)
-
-export const login = createAsyncThunk(
-  "auth/login",
-  async (user, thunkAPI) => {
-    try {
-      return await authService.login(user);
-    } catch (err) {
-      return thunkAPI.rejectWithValue(err);
-    }
   },
 );
+
+export const login = createAsyncThunk("auth/login", async (user, thunkAPI) => {
+  try {
+    return await authService.login(user);
+  } catch (err) {
+    return thunkAPI.rejectWithValue(err);
+  }
+});
 
 export const authSlice = createSlice({
   name: "auth",
