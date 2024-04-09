@@ -48,6 +48,9 @@ const Login = () => {
         <div className="col-12">
           <div className="login-card col-4 m-auto">
             <h4 className="section-heading">Login</h4>
+            <div className="mx-3 text-danger small">
+              {isError == true ? "Your login or password may be wrong, please try again." : ""}
+            </div>
             <form action="" onSubmit={formik.handleSubmit}>
               <CustomInput
                 divClassName="form-floating m-3"
