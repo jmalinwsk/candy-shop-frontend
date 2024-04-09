@@ -27,7 +27,6 @@ const Login = () => {
     validationSchema: schema,
     onSubmit: (values) => {
       dispatch(login(values));
-      alert(JSON.stringify(values, null, 2));
     },
   });
   const { user, isLoading, isError, isSuccess, message } = useSelector(
@@ -49,7 +48,7 @@ const Login = () => {
           <div className="login-card col-4 m-auto">
             <h4 className="section-heading">Login</h4>
             <div className="mx-3 text-danger small">
-              {isError == true ? "Your login or password may be wrong, please try again." : ""}
+              {message.message === "Rejected" ? "Your login or password may be wrong, please try again." : ""}
             </div>
             <form action="" onSubmit={formik.handleSubmit}>
               <CustomInput
