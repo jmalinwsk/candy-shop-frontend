@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   TfiLayoutColumn2,
   TfiLayoutColumn4,
@@ -10,9 +10,19 @@ import ProductCard from "../components/ProductCard";
 import SectionContainer from "../components/SectionContainer";
 import CustomInput from "../components/CustomInput";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../features/products/productSlice";
 
 const Store = () => {
   const [grid, setGrid] = useState(3);
+  const productState = useSelector((state) => state.product.product);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    getAllProducts();
+  }, []);
+  const getAllProducts = () => {
+    dispatch(getProducts());
+  };
   return (
     <>
       <Meta title={"Store - Candy Shop"} />
@@ -187,7 +197,7 @@ const Store = () => {
           </div>
           <div className="products-wrapper py-3">
             <div className="d-flex flex-wrap">
-              <ProductCard grid={grid} />
+              <ProductCard data={productState} grid={grid} />
             </div>
           </div>
         </div>

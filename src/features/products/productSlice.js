@@ -1,19 +1,16 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import productService from "./productService";
 
-export const getProducts = createAsyncThunk(
-  "product/get-products",
-  async (thunkAPI) => {
-    try {
-      return await productService.getProducts();
-    } catch (err) {
-      return thunkAPI.rejectWithValue(err);
-    }
-  },
-);
+export const getProducts = createAsyncThunk("product/get", async (thunkAPI) => {
+  try {
+    return await productService.getProducts();
+  } catch (err) {
+    return thunkAPI.rejectWithValue(err);
+  }
+});
 
 const initialState = {
-  products: [],
+  product: [],
   isError: false,
   isLoading: false,
   isSuccess: false,
@@ -21,7 +18,7 @@ const initialState = {
 };
 
 export const productSlice = createSlice({
-  name: "products",
+  name: "product",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -33,7 +30,7 @@ export const productSlice = createSlice({
         state.isLoading = false;
         state.isError = false;
         state.isSuccess = true;
-        state.products = action.payload;
+        state.product = action.payload;
       })
       .addCase(getProducts.rejected, (state, action) => {
         state.isLoading = false;
