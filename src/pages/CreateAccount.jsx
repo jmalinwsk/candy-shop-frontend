@@ -38,27 +38,27 @@ const CreateAccount = () => {
       <Breadcrumbs />
       <SectionContainer className="create-account-wrapper py-5">
         <div className="col-12">
-        <form action="" onSubmit={formik.handleSubmit}>
-          <div className="create-account-card col-4 m-auto">
-            <h4 className="section-heading">Create account</h4>
-            <CustomInput
-              divClassName="form-floating m-3"
-              type="text"
-              className="form-control"
-              placeholder="First name"
+          <form action="" onSubmit={formik.handleSubmit}>
+            <div className="create-account-card col-4 m-auto">
+              <h4 className="section-heading">Create account</h4>
+              <CustomInput
+                divClassName="form-floating m-3"
+                type="text"
+                className="form-control"
+                placeholder="First name"
                 name="firstName"
                 value={formik.values.firstName}
                 onChange={formik.handleChange("firstName")}
                 onBlur={formik.handleBlur("firstName")}
-            />
-                          <div className="text-danger small">
+              />
+              <div className="text-danger small">
                 {formik.touched.firstName && formik.errors.firstName}
               </div>
-            <CustomInput
-              divClassName="form-floating m-3"
-              type="text"
-              className="form-control"
-              placeholder="Last name"
+              <CustomInput
+                divClassName="form-floating m-3"
+                type="text"
+                className="form-control"
+                placeholder="Last name"
                 name="lastName"
                 value={formik.values.lastName}
                 onChange={formik.handleChange("lastName")}
@@ -67,9 +67,9 @@ const CreateAccount = () => {
               <div className="text-danger small">
                 {formik.touched.lastName && formik.errors.lastName}
               </div>
-            <CustomInput
-              divClassName="form-floating m-3"
-              type="email"
+              <CustomInput
+                divClassName="form-floating m-3"
+                type="email"
                 className="form-control"
                 placeholder="E-mail"
                 value={formik.values.email}
@@ -79,9 +79,9 @@ const CreateAccount = () => {
               <div className="text-danger small">
                 {formik.touched.email && formik.errors.email}
               </div>
-            <CustomInput
-              divClassName="form-floating m-3"
-              type="password"
+              <CustomInput
+                divClassName="form-floating m-3"
+                type="password"
                 className="form-control"
                 placeholder="Password"
                 value={formik.values.password}
@@ -91,13 +91,13 @@ const CreateAccount = () => {
               <div className="text-danger small">
                 {formik.touched.password && formik.errors.password}
               </div>
-          </div>
-          <div className="d-flex justify-content-center gap-15">
+            </div>
+            <div className="d-flex justify-content-center gap-15">
               <button type="submit">Create account</button>
-            <Link to="/login">
-              <button type="submit">Sign in</button>
-            </Link>
-          </div>
+              <Link to="/login">
+                <button type="submit">Sign in</button>
+              </Link>
+            </div>
           </form>
         </div>
       </SectionContainer>

@@ -1,17 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Meta from "../components/Meta";
 import Breadcrumbs from "../components/Breadcrumbs";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import SectionContainer from "../components/SectionContainer";
 import CustomInput from "../components/CustomInput";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { useDispatch, useSelector } from "react-redux";
-import { login } from "../features/auth/authSlice";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../features/auth/authSlice";
 
 const Login = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const schema = yup.object().shape({
     email: yup
       .string()
@@ -26,19 +25,9 @@ const Login = () => {
     },
     validationSchema: schema,
     onSubmit: (values) => {
-      dispatch(login(values));
+      dispatch(loginUser(values));
     },
   });
-  const { user, isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.auth,
-  );
-  useEffect(() => {
-    if (!user == null || isSuccess) {
-      navigate("/account");
-    } else {
-      navigate("");
-    }
-  }, [user, isLoading, isError, isSuccess, message]);
   return (
     <>
       <Meta title={"Log In - Candy Shop"} />
@@ -48,12 +37,6 @@ const Login = () => {
           <form action="" onSubmit={formik.handleSubmit}>
             <div className="login-card col-4 m-auto">
               <h4 className="section-heading">Login</h4>
-              <div className="text-danger small">
-                {message.message === "Rejected"
-                  ? "Your login or password may be wrong, please try again."
-                  : ""}
-              </div>
-
               <CustomInput
                 divClassName="form-floating m-3"
                 type="email"
@@ -61,13 +44,12 @@ const Login = () => {
                 className="form-control"
                 placeholder="E-mail"
                 onChange={formik.handleChange("email")}
+                onBlur={formik.handleBlur("email")}
                 value={formik.values.email}
               />
-              {formik.touched.email && formik.errors.email ? (
-                <div className="ms-3 text-danger small">
-                  {formik.errors.email}
-                </div>
-              ) : null}
+              <div className="ms-3 text-danger small">
+                {formik.touched.email && formik.errors.email}
+              </div>
               <CustomInput
                 divClassName="form-floating m-3"
                 type="password"
@@ -75,23 +57,19 @@ const Login = () => {
                 className="form-control"
                 placeholder="Password"
                 onChange={formik.handleChange("password")}
+                onBlur={formik.handleBlur("password")}
                 value={formik.values.password}
               />
-              {formik.touched.password && formik.errors.password ? (
-                <div className="ms-3 text-danger small">
-                  {formik.errors.password}
-                </div>
-              ) : null}
+              <div className="ms-3 text-danger small">
+                {formik.touched.password && formik.errors.password}
+              </div>
               <div className="m-3">
                 <Link to="forgot-password" className="me-3">
                   Forgot your password?
                 </Link>
               </div>
               <div className="d-flex justify-content-center gap-15">
-                {/* <Link to="/"> */}
                 <button type="submit">Sign in</button>
-                {/* </Link> */}
-
                 <Link to="/create-account">
                   <button type="submit">Create account</button>
                 </Link>
