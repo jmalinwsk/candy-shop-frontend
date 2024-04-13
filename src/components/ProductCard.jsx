@@ -1,10 +1,16 @@
 import React from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import { useDispatch, userDispatch, useSelector } from "react-redux";
+import { addToWishlist } from "../features/products/productSlice";
 
 const ProductCard = (props) => {
   let location = useLocation();
+  const dispatch = useDispatch();
   const { grid, data } = props;
+  const addProductToWishlist = (productId) => {
+    dispatch(addToWishlist(productId));
+  }
   return (
     <>
       {data?.map((item, index) => {
@@ -15,7 +21,7 @@ const ProductCard = (props) => {
           >
             <div className="product-card">
               <div className="wishlist-icon position-absolute">
-                <FaRegHeart />
+              <button onClick={(e) => addProductToWishlist(item?._id)}><FaRegHeart /></button>
               </div>
               <Link to="/store/product/:id">
                 <img src={item?.images[0].url} alt="product" />
