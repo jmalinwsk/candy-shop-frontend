@@ -10,7 +10,7 @@ const ProductCard = (props) => {
   const { grid, data } = props;
   const addProductToWishlist = (productId) => {
     dispatch(addToWishlist(productId));
-  }
+  };
   return (
     <>
       {data?.map((item, index) => {
@@ -21,7 +21,9 @@ const ProductCard = (props) => {
           >
             <div className="product-card">
               <div className="wishlist-icon position-absolute">
-              <button onClick={(e) => addProductToWishlist(item?._id)}><FaRegHeart /></button>
+                <button onClick={(e) => addProductToWishlist(item?._id)}>
+                  <FaRegHeart />
+                </button>
               </div>
               <Link to="/store/product/:id">
                 <img src={item?.images[0].url} alt="product" />
