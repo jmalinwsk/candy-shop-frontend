@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import SectionContainer from "../components/SectionContainer";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserWishlist } from "../features/auth/authSlice";
+import { addOrRemoveFromWishlist } from "../features/products/productSlice";
 
 const Wishlist = () => {
   const dispatch = useDispatch();
@@ -16,6 +17,12 @@ const Wishlist = () => {
     getWishlist();
   }, []);
   const wishlistState = useSelector((state) => state.auth.wishlist);
+  const removeFromWishlist = (productId) => {
+    dispatch(addOrRemoveFromWishlist(productId));
+    setTimeout(() => {
+      dispatch(getUserWishlist());
+    }, 300);
+  };
   return (
     <>
       <Meta title={"Wishlist - Candy Shop"} />
@@ -40,7 +47,9 @@ const Wishlist = () => {
                   </div>
                 </div>
                 <div className="remove-from-wishlist mx-1">
-                  <RxCross1 />
+                  <button onClick={(e) => removeFromWishlist(item?._id)}>
+                    <RxCross1 />
+                  </button>
                 </div>
               </div>
             );
