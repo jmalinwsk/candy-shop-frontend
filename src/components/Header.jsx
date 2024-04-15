@@ -24,6 +24,7 @@ const Header = () => {
                   placeholder="What are you looking for?"
                   aria-label="What are you looking for?"
                   aria-describedby="basic-addon2"
+                  id="search-bar"
                 />
                 <span className="input-group-text p-2" id="basic-addon2">
                   <BsSearch className="fs-5" />

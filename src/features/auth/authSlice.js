@@ -8,6 +8,7 @@ const getCustomerFromLocalStorage = localStorage.getItem("user")
 
 const initialState = {
   user: getCustomerFromLocalStorage,
+  wishlist: [],
   isError: false,
   isLoading: false,
   isSuccess: false,
@@ -36,6 +37,17 @@ export const loginUser = createAsyncThunk(
   },
 );
 
+export const getUserWishlist = createAsyncThunk(
+  "user/wishlist",
+  async (user, thunkAPI) => {
+    try {
+      return await authService.getUserWishlist(user);
+    } catch (err) {
+      return thunkAPI.rejectWithValue(err);
+    }
+  },
+);
+
 export const authSlice = createSlice({
   name: "auth",
   initialState: initialState,
@@ -51,7 +63,7 @@ export const authSlice = createSlice({
         state.isError = false;
         state.createdUser = action.payload;
         if (state.isSuccess) {
-          toast.info("User created successfully!");
+          toast.info("User created successfully");
         }
       })
       .addCase(registerUser.rejected, (state, action) => {
@@ -72,7 +84,7 @@ export const authSlice = createSlice({
         state.isError = false;
         state.user = action.payload;
         if (state.isSuccess) {
-          toast.info("User logged in successfully.");
+          toast.info("User logged in successfully");
         }
       })
       .addCase(loginUser.rejected, (state, action) => {
@@ -80,6 +92,22 @@ export const authSlice = createSlice({
         state.isError = true;
         state.isSuccess = false;
         state.user = null;
+        state.message = action.error;
+      })
+      .addCase(getUserWishlist.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getUserWishlist.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.isError = false;
+        state.wishlist = action.payload.wishlist;
+        state.message = "Wishlist fetched successfully";
+      })
+      .addCase(getUserWishlist.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.isSuccess = false;
         state.message = action.error;
       });
   },

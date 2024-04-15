@@ -17,12 +17,12 @@ const Store = () => {
   const [grid, setGrid] = useState(3);
   const productState = useSelector((state) => state.product.product);
   const dispatch = useDispatch();
-  useEffect(() => {
-    getAllProducts();
-  }, []);
   const getAllProducts = () => {
     dispatch(getProducts());
   };
+  useEffect(() => {
+    getAllProducts();
+  }, []);
   return (
     <>
       <Meta title={"Store - Candy Shop"} />
@@ -60,9 +60,13 @@ const Store = () => {
                   className="form-check-input"
                   type="checkbox"
                   value=""
-                  id=""
+                  id="available"
                 />
-                <label className="form-check-label" htmlFor="">
+                <label
+                  className="form-check-label"
+                  htmlFor="available"
+                  id="text"
+                >
                   Available
                 </label>
               </div>
@@ -71,9 +75,13 @@ const Store = () => {
                   className="form-check-input"
                   type="checkbox"
                   value=""
-                  id=""
+                  id="out-of-stock"
                 />
-                <label className="form-check-label" htmlFor="">
+                <label
+                  className="form-check-label"
+                  htmlFor="out-of-stock"
+                  id="text"
+                >
                   Out of stock
                 </label>
               </div>
@@ -87,9 +95,13 @@ const Store = () => {
                   className="form-check-input"
                   type="checkbox"
                   value=""
-                  id=""
+                  id="haribo-brand"
                 />
-                <label className="form-check-label" htmlFor="">
+                <label
+                  className="form-check-label"
+                  htmlFor="haribo-brand"
+                  id="text"
+                >
                   Haribo
                 </label>
               </div>
@@ -98,9 +110,9 @@ const Store = () => {
                   className="form-check-input"
                   type="checkbox"
                   value=""
-                  id=""
+                  id="skittles-brand"
                 />
-                <label className="form-check-label" htmlFor="">
+                <label className="form-check-label" htmlFor="skittles-brand">
                   Skittles
                 </label>
               </div>
@@ -114,9 +126,13 @@ const Store = () => {
                   className="form-check-input"
                   type="checkbox"
                   value=""
-                  id=""
+                  id="sweet-flavor"
                 />
-                <label className="form-check-label" htmlFor="">
+                <label
+                  className="form-check-label"
+                  htmlFor="sweet-flavor"
+                  id="text"
+                >
                   Sweet
                 </label>
               </div>
@@ -125,9 +141,13 @@ const Store = () => {
                   className="form-check-input"
                   type="checkbox"
                   value=""
-                  id=""
+                  id="sour-flavor"
                 />
-                <label className="form-check-label" htmlFor="">
+                <label
+                  className="form-check-label"
+                  htmlFor="sour-flavor"
+                  id="text"
+                >
                   Sour
                 </label>
               </div>
@@ -143,6 +163,7 @@ const Store = () => {
                     type="text"
                     className="form-control"
                     placeholder="From"
+                    id="from"
                   />
                 </div>
                 <div className="col-md">
@@ -151,6 +172,7 @@ const Store = () => {
                     type="text"
                     className="form-control"
                     placeholder="To"
+                    id="to"
                   />
                 </div>
               </div>
@@ -167,7 +189,7 @@ const Store = () => {
             </div>
             <div className="sort-by d-flex ms-auto align-items-center">
               <p className="d-block w-0 text-center m-auto">Sort by:</p>
-              <select className="form-select w-auto ms-2">
+              <select className="form-select w-auto ms-2" id="sort">
                 <option value="most-popular">Most popular</option>
                 <option value="alph-az">Alphabetically, A-Z</option>
                 <option value="alph-za">Alphabetically, Z-A</option>

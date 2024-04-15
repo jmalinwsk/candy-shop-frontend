@@ -10,6 +10,7 @@ const CustomInput = (props) => {
     value,
     onChange,
     onBlur,
+    id,
   } = props;
   return (
     <div className={divClassName}>
@@ -21,8 +22,9 @@ const CustomInput = (props) => {
         value={value}
         onChange={onChange}
         onBlur={onBlur}
+        id={id}
       />
-      <label htmlFor="floatingInput">{placeholder}</label>
+      <label htmlFor={id}>{placeholder}</label>
     </div>
   );
 };
