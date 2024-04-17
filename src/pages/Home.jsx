@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import ProductCard from "../components/ProductCard";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -22,61 +22,67 @@ import "swiper/css/pagination";
 import Meta from "../components/Meta";
 import { Link } from "react-router-dom";
 import SectionContainer from "../components/SectionContainer";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../features/products/productSlice";
 
 const Home = () => {
+  const productState = useSelector((state) => state.product.product);
+  const dispatch = useDispatch();
+  const getAllProducts = () => {
+    dispatch(getProducts());
+  };
+  useEffect(() => {
+    getAllProducts();
+  }, []);
   return (
     <>
       <Meta title={"Candy Shop"} />
       <SectionContainer className="banners-wrapper py-3">
-        <div className="row">
-          <div className="col-8">
-            <Swiper
-              spaceBetween={10}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Pagination]}
-            >
-              <SwiperSlide>
-                <img
-                  src={firstMainBanner}
-                  className="img-fluid rounded-2"
-                  alt="Main promo banner"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={firstMainBanner}
-                  className="img-fluid rounded-2"
-                  alt="Main promo banner"
-                />
-              </SwiperSlide>
-            </Swiper>
-          </div>
-          <div className="col-4 d-flex flex-wrap">
-            <img
-              src={firstSideBanner}
-              className="img-fluid rounded-2 pb-1"
-              alt="First side promo banner"
-            />
-            <img
-              src={secondSideBanner}
-              className="img-fluid rounded-2 pt-1"
-              alt="Second side promo banner"
-            />
-          </div>
+        <div className="col-8">
+          <Swiper
+            spaceBetween={10}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+          >
+            <SwiperSlide>
+              <img
+                src={firstMainBanner}
+                className="img-fluid rounded-2"
+                alt="Main promo banner"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={firstMainBanner}
+                className="img-fluid rounded-2"
+                alt="Main promo banner"
+              />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+        <div className="col-4 d-flex flex-wrap">
+          <img
+            src={firstSideBanner}
+            className="img-fluid rounded-2 pb-1"
+            alt="First side promo banner"
+          />
+          <img
+            src={secondSideBanner}
+            className="img-fluid rounded-2 pt-1"
+            alt="Second side promo banner"
+          />
         </div>
       </SectionContainer>
       <SectionContainer className="new-wrapper py-3">
-        <div className="row">
-          <div className="col-12">
-            <h3 className="section-heading">New arrivals</h3>
-          </div>
-          <ProductCard className="p-0" />
-          <ProductCard className="p-0" />
-          <ProductCard className="p-0" />
-          <ProductCard className="p-0" />
+        <div className="col-12">
+          <h3 className="section-heading">New arrivals</h3>
         </div>
+        <ProductCard className="p-0" />
+        <ProductCard className="p-0" />
+        <ProductCard className="p-0" />
+        <ProductCard className="p-0" />
       </SectionContainer>
       <SectionContainer className="categories-wrapper py-3">
         <div className="row">
@@ -127,77 +133,54 @@ const Home = () => {
         </div>
       </SectionContainer>
       <SectionContainer className="brands-wrapper py-3">
-        <div className="row">
-          <div className="col-12">
-            <h3 className="section-heading">Featured brands</h3>
-            <div className="brands">
-              <Marquee pauseOnHover="true">
-                <img src={hariboLogo} alt="Haribo" />
-                <img src={skittlesLogo} alt="Skittles" />
-                <img src={mmsLogo} alt="m&m's" />
-                <img src={hubbaBubbaLogo} alt="Hubba Bubba" />
-                <img src={chupaChupsLogo} alt="Chupa Chups" />
-              </Marquee>
-            </div>
+        <div className="col-12">
+          <h3 className="section-heading">Featured brands</h3>
+          <div className="brands">
+            <Marquee pauseOnHover="true">
+              <img src={hariboLogo} alt="Haribo" />
+              <img src={skittlesLogo} alt="Skittles" />
+              <img src={mmsLogo} alt="m&m's" />
+              <img src={hubbaBubbaLogo} alt="Hubba Bubba" />
+              <img src={chupaChupsLogo} alt="Chupa Chups" />
+            </Marquee>
           </div>
         </div>
       </SectionContainer>
       <SectionContainer className="featured-wrapper py-3">
-        <div className="row">
-          <div className="col-12">
-            <h3 className="section-heading">Featured products</h3>
-            <Swiper
-              slidesPerView={4}
-              grabCursor={true}
-              spaceBetween={1}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Pagination]}
-              className=""
-            >
-              <SwiperSlide className="me-3">
-                <ProductCard />
-              </SwiperSlide>
-              <SwiperSlide className="me-3">
-                <ProductCard />
-              </SwiperSlide>
-              <SwiperSlide className="me-3">
-                <ProductCard />
-              </SwiperSlide>
-              <SwiperSlide className="me-3">
-                <ProductCard />
-              </SwiperSlide>
-              <SwiperSlide className="me-3">
-                <ProductCard />
-              </SwiperSlide>
-              <SwiperSlide className="me-3">
-                <ProductCard />
-              </SwiperSlide>
-              <SwiperSlide className="me-3">
-                <ProductCard />
-              </SwiperSlide>
-              <SwiperSlide>
-                <ProductCard />
-              </SwiperSlide>
-            </Swiper>
-          </div>
+        <div className="col-12">
+          <h3 className="section-heading">Featured products</h3>
+          <Swiper
+            slidesPerView={4}
+            grabCursor={true}
+            spaceBetween={1}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className=""
+          >
+            <SwiperSlide className="me-3">
+              <ProductCard
+                data={productState.filter((product) =>
+                  product.tags.includes("featured"),
+                )}
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </SectionContainer>
       <SectionContainer className="about-wrapper py-3">
-        <div className="row">
-          <div className="col-12">
-            <h3 className="section-heading">About our shop</h3>
-            <p className="text-justify">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
+        <div className="col-12">
+          <h3 className="section-heading">About our shop</h3>
+          <p className="text-justify">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </div>
       </SectionContainer>
     </>
