@@ -159,13 +159,15 @@ const Home = () => {
             modules={[Pagination]}
             className=""
           >
-            <SwiperSlide className="me-3">
-              <ProductCard
-                data={productState.filter((product) =>
-                  product.tags.includes("featured"),
-                )}
-              />
-            </SwiperSlide>
+            {
+              productState?.filter((product) => product.tags.includes("featured"))?.map((item, index) => {
+                return (
+                  <SwiperSlide className="me-3">
+                  <ProductCard item={item} key={index} />
+                </SwiperSlide>
+                )
+              })
+            }
           </Swiper>
         </div>
       </SectionContainer>

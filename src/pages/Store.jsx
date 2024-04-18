@@ -219,7 +219,9 @@ const Store = () => {
           </div>
           <div className="products-wrapper py-3">
             <div className="d-flex flex-wrap">
-              <ProductCard data={productState} grid={grid} />
+              {productState?.map((item, index) => {
+                return <ProductCard item={item} key={index} grid={grid} />;
+              })}
             </div>
           </div>
         </div>
