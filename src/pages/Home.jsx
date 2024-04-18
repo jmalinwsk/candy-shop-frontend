@@ -79,10 +79,11 @@ const Home = () => {
         <div className="col-12">
           <h3 className="section-heading">New arrivals</h3>
         </div>
-        <ProductCard className="p-0" />
-        <ProductCard className="p-0" />
-        <ProductCard className="p-0" />
-        <ProductCard className="p-0" />
+        {productState
+          ?.filter((product) => product.tags.includes("new"))
+          ?.map((item, index) => {
+            return <ProductCard item={item} key={index} />;
+          })}
       </SectionContainer>
       <SectionContainer className="categories-wrapper py-3">
         <div className="row">
@@ -159,15 +160,15 @@ const Home = () => {
             modules={[Pagination]}
             className=""
           >
-            {
-              productState?.filter((product) => product.tags.includes("featured"))?.map((item, index) => {
+            {productState
+              ?.filter((product) => product.tags.includes("featured"))
+              ?.map((item, index) => {
                 return (
                   <SwiperSlide className="me-3">
-                  <ProductCard item={item} key={index} />
-                </SwiperSlide>
-                )
-              })
-            }
+                    <ProductCard item={item} key={index} />
+                  </SwiperSlide>
+                );
+              })}
           </Swiper>
         </div>
       </SectionContainer>
