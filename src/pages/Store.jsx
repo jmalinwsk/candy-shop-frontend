@@ -185,7 +185,7 @@ const Store = () => {
         <div className="col-9 py-3">
           <div className="sort-view-wrapper d-flex align-items-center">
             <div className="d-flex align-items-center">
-              <p className="mb-0 small">30 Products</p>
+              <p className="mb-0 small">{productState?.length} Products</p>
             </div>
             <div className="sort-by d-flex ms-auto align-items-center">
               <p className="d-block w-0 text-center m-auto">Sort by:</p>
