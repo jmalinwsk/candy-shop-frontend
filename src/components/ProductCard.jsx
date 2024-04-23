@@ -8,6 +8,7 @@ const ProductCard = (props) => {
   let location = useLocation();
   const dispatch = useDispatch();
   const { item, index, grid } = props;
+  console.log(item);
   const addOrRemoveProductFromWishlist = (productId) => {
     dispatch(addOrRemoveFromWishlist(productId));
   };
@@ -23,11 +24,12 @@ const ProductCard = (props) => {
               <FaRegHeart />
             </button>
           </div>
-          <Link to="/store/product/:id">
+          <Link to={`/store/${item?._id}`}>
             <img src={item?.images[0].url} alt="product" />
           </Link>
+
           <div className="product-details text-center text-truncate">
-            <Link to="/store/product/:id">
+            <Link to={`/store/${item?._id}`}>
               <h6 className="product-title ">{item?.title}</h6>
             </Link>
             <p

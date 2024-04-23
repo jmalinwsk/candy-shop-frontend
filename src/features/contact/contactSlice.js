@@ -4,9 +4,9 @@ import { toast } from "react-toastify";
 
 export const createQuery = createAsyncThunk(
   "contact/post",
-  async (enquiryData, thunkAPI) => {
+  async (data, thunkAPI) => {
     try {
-      return await contactService.postQuery(enquiryData);
+      return await contactService.postQuery(data);
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }

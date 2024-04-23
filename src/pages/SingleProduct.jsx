@@ -1,12 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactStars from "react-rating-stars-component";
 import Meta from "../components/Meta";
 import Breadcrumbs from "../components/Breadcrumbs";
 import hubbaBubbaImage from "../images/products/hubba-bubba-bubble-tap-sour-blue-raspberry.jpg";
 import SectionContainer from "../components/SectionContainer";
+import { useLocation } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getProduct } from "../features/products/productSlice";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 
 const SingleProduct = () => {
   const [orderedProduct, setOrderedProduct] = useState(true);
+  const location = useLocation();
+  const productId = location.pathname.split("/")[2];
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getProduct(productId));
+  }, []);
+  const product = useSelector((state) => state.product.product);
   return (
     <>
       <Meta title={"Product Name - Candy Shop"} />
@@ -15,33 +27,41 @@ const SingleProduct = () => {
         <div className="image-details-wrapper d-flex py-3">
           <div className="col-6">
             <div className="image-wrapper p-3">
-              <img src={hubbaBubbaImage} className="rounded-3" alt="product" />
+              <Swiper
+                spaceBetween={10}
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[Pagination]}
+              >
+                {product?.images &&
+                  product.images.map((item, index) => {
+                    return (
+                      <SwiperSlide>
+                        <img
+                          src={item.url}
+                          className="rounded-3"
+                          alt="product"
+                        />
+                      </SwiperSlide>
+                    );
+                  })}
+              </Swiper>
             </div>
           </div>
           <div className="col-6">
             <div className="details-wrapper p-1">
-              <h4 className="section-heading">
-                Hubba Bubba Bubble Tape Sour Blue Raspberry
-              </h4>
+              <h4 className="section-heading">{product?.title}</h4>
               <h5 className="mb-4">$4.50 USD</h5>
               <h5>
                 <strong>Availability</strong>
               </h5>
-              <p>in stock</p>
+              {product?.quantity ? <p>in stock</p> : <p>out of stock</p>}
               <h5>
                 <strong>Brand</strong>
               </h5>
-              <p>Hubba Bubba</p>
-              <h5>
-                <strong>Tags</strong>
-              </h5>
-              <p>sour</p>
-              <p className="text-justify my-4">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id
-                ipsam possimus similique obcaecati, quidem reprehenderit
-                voluptate reiciendis ullam mollitia fuga enim hic! Eligendi
-                beatae sed rerum ipsa earum perspiciatis veritatis.
-              </p>
+              <p>{product?.brand}</p>
+              <p className="text-justify my-4">{product?.description}</p>
             </div>
             <div></div>
             <div className="d-flex align-items-center">

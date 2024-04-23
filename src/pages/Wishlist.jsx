@@ -40,7 +40,7 @@ const Wishlist = () => {
                     <img src={item?.images[0].url} alt="product" />
                   </div>
                   <div className="product-details">
-                    <Link to="/store/product/:id">
+                    <Link to="/store/:id">
                       <h6 className="product-title">{item?.title}</h6>
                     </Link>
                     <p className="price-text">${item?.price} USD</p>

@@ -24,7 +24,7 @@ const Cart = () => {
                 <img src={hubbaBubbaImage} className="rounded" alt="product" />
               </div>
               <div className="w-75 ms-2">
-                <a href="/store/product/:id">
+                <a href="/store/:id">
                   <h5>Hubba Bubba Bubble Tape Sour Blue Raspberry</h5>
                 </a>
               </div>
