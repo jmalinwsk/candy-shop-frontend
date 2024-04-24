@@ -37,7 +37,7 @@ const ProductCard = (props) => {
             >
               {item?.description}
             </p>
-            <p className="price-text">$4.50 USD</p>
+            <p className="price-text">${item?.price} USD</p>
             <div className="text-center p-2">
               <button>Add to cart</button>
             </div>

@@ -8,16 +8,27 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProduct } from "../features/products/productsSlice";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import { addToCart } from "../features/auth/authSlice";
 
 const SingleProduct = () => {
   const [orderedProduct, setOrderedProduct] = useState(true);
   const location = useLocation();
   const productId = location.pathname.split("/")[2];
+  const product = useSelector((state) => state.products.product);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getProduct(productId));
   }, []);
-  const product = useSelector((state) => state.products.product);
+  const [quantity, setQuantity] = useState(1);
+  const addProductToCart = () => {
+    dispatch(
+      addToCart({
+        productId: productId,
+        price: product?.price,
+        quantity: quantity,
+      }),
+    );
+  };
   return (
     <>
       <Meta title={"Product Name - Candy Shop"} />
@@ -51,7 +62,7 @@ const SingleProduct = () => {
           <div className="col-6">
             <div className="details-wrapper p-1">
               <h4 className="section-heading">{product?.title}</h4>
-              <h5 className="mb-4">$4.50 USD</h5>
+              <h5 className="mb-4">${product?.price} USD</h5>
               <h5>
                 <strong>Availability</strong>
               </h5>
@@ -70,9 +81,15 @@ const SingleProduct = () => {
                 min={1}
                 max={10}
                 className="form-control w-25 me-2"
-                defaultValue={1}
+                onChange={(e) => setQuantity(e.target.value)}
+                value={quantity}
               />
-              <button>Add to cart</button>
+              <button
+                type="button"
+                onClick={() => addProductToCart(product?._id)}
+              >
+                Add to cart
+              </button>
             </div>
           </div>
         </div>

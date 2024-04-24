@@ -7,6 +7,7 @@ const registerUser = async (userData) => {
     return response.data;
   }
 };
+
 const loginUser = async (userData) => {
   const response = await axios.post(`${baseUrl}/user/login`, userData);
   if (response.data) {
@@ -22,10 +23,18 @@ const getUserWishlist = async () => {
   }
 };
 
+const addToCart = async (data) => {
+  const response = await axios.post(`${baseUrl}/user/cart`, data, config);
+  if (response.data) {
+    return response.data;
+  }
+};
+
 const authService = {
   registerUser,
   loginUser,
   getUserWishlist,
+  addToCart,
 };
 
 export default authService;
