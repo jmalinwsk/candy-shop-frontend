@@ -11,11 +11,11 @@ import SectionContainer from "../components/SectionContainer";
 import CustomInput from "../components/CustomInput";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "../features/products/productSlice";
+import { getProducts } from "../features/products/productsSlice";
 
 const Store = () => {
   const [grid, setGrid] = useState(3);
-  const productState = useSelector((state) => state.product.product);
+  const productState = useSelector((state) => state.products.products);
   const dispatch = useDispatch();
   const getAllProducts = () => {
     dispatch(getProducts());

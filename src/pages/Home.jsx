@@ -23,10 +23,10 @@ import Meta from "../components/Meta";
 import { Link } from "react-router-dom";
 import SectionContainer from "../components/SectionContainer";
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "../features/products/productSlice";
+import { getProducts } from "../features/products/productsSlice";
 
 const Home = () => {
-  const productState = useSelector((state) => state.product.product);
+  const productState = useSelector((state) => state.products.products);
   const dispatch = useDispatch();
   const getAllProducts = () => {
     dispatch(getProducts());

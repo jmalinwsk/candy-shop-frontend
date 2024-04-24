@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import productService from "./productService";
+import productService from "./productsService";
 
 export const getProduct = createAsyncThunk(
   "product/get",
@@ -35,15 +35,16 @@ export const addOrRemoveFromWishlist = createAsyncThunk(
 );
 
 const initialState = {
-  product: [],
+  products: [],
+  product: {},
   isError: false,
   isLoading: false,
   isSuccess: false,
   message: "",
 };
 
-export const productSlice = createSlice({
-  name: "product",
+export const productsSlice = createSlice({
+  name: "products",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
@@ -55,7 +56,7 @@ export const productSlice = createSlice({
         state.isLoading = false;
         state.isError = false;
         state.isSuccess = true;
-        state.product = action.payload;
+        state.products = action.payload;
       })
       .addCase(getProducts.rejected, (state, action) => {
         state.isLoading = false;
@@ -97,4 +98,4 @@ export const productSlice = createSlice({
   },
 });
 
-export default productSlice.reducer;
+export default productsSlice.reducer;

@@ -2,7 +2,7 @@ import React from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addOrRemoveFromWishlist } from "../features/products/productSlice";
+import { addOrRemoveFromWishlist } from "../features/products/productsSlice";
 
 const ProductCard = (props) => {
   let location = useLocation();

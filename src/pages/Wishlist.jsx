@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import SectionContainer from "../components/SectionContainer";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserWishlist } from "../features/auth/authSlice";
-import { addOrRemoveFromWishlist } from "../features/products/productSlice";
+import { addOrRemoveFromWishlist } from "../features/products/productsSlice";
 
 const Wishlist = () => {
   const dispatch = useDispatch();

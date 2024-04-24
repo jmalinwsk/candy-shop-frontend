@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 import ReactStars from "react-rating-stars-component";
 import Meta from "../components/Meta";
 import Breadcrumbs from "../components/Breadcrumbs";
-import hubbaBubbaImage from "../images/products/hubba-bubba-bubble-tap-sour-blue-raspberry.jpg";
 import SectionContainer from "../components/SectionContainer";
 import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getProduct } from "../features/products/productSlice";
+import { getProduct } from "../features/products/productsSlice";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
@@ -18,7 +17,7 @@ const SingleProduct = () => {
   useEffect(() => {
     dispatch(getProduct(productId));
   }, []);
-  const product = useSelector((state) => state.product.product);
+  const product = useSelector((state) => state.products.product);
   return (
     <>
       <Meta title={"Product Name - Candy Shop"} />
