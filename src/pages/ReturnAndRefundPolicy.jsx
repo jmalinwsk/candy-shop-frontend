@@ -19,7 +19,7 @@ const Returns = () => {
           <p className="text-justify">
             If, for any reason, You are not completely satisfied with a purchase
             We invite You to review our policy on refunds and returns. This
-            Return and Refund Policy has been created with the help of the{" "}
+            Return and Refund Policy has been created with the help of the
             <a href="https://www.termsfeed.com/return-refund-policy-generator/">
               Return and Refund Policy Generator
             </a>
@@ -78,7 +78,7 @@ const Returns = () => {
             </li>
             <li>
               <p className="text-justify">
-                <strong>Website</strong> refers to Candy Shop, accessible from{" "}
+                <strong>Website</strong> refers to Candy Shop, accessible from
                 <a
                   href="samplepage.com"
                   rel="external nofollow noopener"

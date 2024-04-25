@@ -74,7 +74,7 @@ const TermsOfService = () => {
                 &quot;Terms&quot;) mean these Terms and Conditions that form the
                 entire agreement between You and the Company regarding the use
                 of the Service. This Terms and Conditions agreement has been
-                created with the help of the{" "}
+                created with the help of the
                 <a href="https://www.termsfeed.com/terms-conditions-generator/">
                   Terms and Conditions Generator
                 </a>
@@ -91,7 +91,7 @@ const TermsOfService = () => {
             </li>
             <li>
               <p className="text-justify">
-                <strong>Website</strong> refers to Candy Shop, accessible from{" "}
+                <strong>Website</strong> refers to Candy Shop, accessible from
                 <a
                   href="samplepage.com"
                   rel="external nofollow noopener"

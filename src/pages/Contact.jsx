@@ -103,7 +103,7 @@ const Contact = () => {
               </li>
 
               <li>
-                <FaPhone className="me-2" />{" "}
+                <FaPhone className="me-2" />
                 <a href="tel:+12345678900">+1 (234) 567-8900</a>
               </li>
               <li>
