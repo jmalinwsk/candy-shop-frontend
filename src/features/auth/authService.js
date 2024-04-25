@@ -30,11 +30,19 @@ const addToCart = async (data) => {
   }
 };
 
+const getUserCart = async () => {
+  const response = await axios.get(`${baseUrl}/user/cart`, config);
+  if (response.data) {
+    return response.data;
+  }
+};
+
 const authService = {
   registerUser,
   loginUser,
   getUserWishlist,
   addToCart,
+  getUserCart,
 };
 
 export default authService;

@@ -8,7 +8,6 @@ const ProductCard = (props) => {
   let location = useLocation();
   const dispatch = useDispatch();
   const { item, index, grid } = props;
-  console.log(item);
   const addOrRemoveProductFromWishlist = (productId) => {
     dispatch(addOrRemoveFromWishlist(productId));
   };

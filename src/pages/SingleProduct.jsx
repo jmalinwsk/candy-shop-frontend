@@ -24,7 +24,7 @@ const SingleProduct = () => {
     dispatch(
       addToCart({
         productId: productId,
-        price: product?.price,
+        price: product?.price * quantity,
         quantity: quantity,
       }),
     );
