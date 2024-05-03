@@ -15,14 +15,14 @@ const CartProductCard = (props) => {
       >
         <div className="cart-col-1 d-flex align-items-center">
           <div className="w-25">
-            <Link to={`/store/${item?._id}`}>
+            <Link to={`/store/${item?.productId._id}`}>
               <img src={item?.productId.images[0].url} alt="product" />
             </Link>
           </div>
           <div className="w-75 ms-2">
-            <a href="/store/:id">
-              <h5>{item?.productId.title}</h5>
-            </a>
+            <Link to={`/store/${item?.productId._id}`}>
+              <h5 className="product-title ">{item?.productId.title}</h5>
+            </Link>
           </div>
         </div>
         <div className="cart-col-2">

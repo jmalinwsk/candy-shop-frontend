@@ -3,7 +3,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addOrRemoveFromWishlist } from "../features/products/productsSlice";
-import { addToCart } from "../features/auth/authSlice";
+import { addToCart } from "../features/user/userSlice";
 
 const ProductCard = (props) => {
   let location = useLocation();
@@ -48,10 +48,7 @@ const ProductCard = (props) => {
             </p>
             <p className="price-text">${item?.price} USD</p>
             <div className="text-center p-2">
-            <button
-                type="button"
-                onClick={() => addProductToCart(item?._id)}
-              >
+              <button type="button" onClick={() => addProductToCart(item?._id)}>
                 Add to cart
               </button>
             </div>

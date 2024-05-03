@@ -5,7 +5,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import SectionContainer from "../components/SectionContainer";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserWishlist } from "../features/auth/authSlice";
+import { getUserWishlist } from "../features/user/userSlice";
 import { addOrRemoveFromWishlist } from "../features/products/productsSlice";
 
 const Wishlist = () => {
@@ -27,7 +27,7 @@ const Wishlist = () => {
     <>
       <Meta title={"Wishlist - Candy Shop"} />
       <Breadcrumbs />
-      <SectionContainer className="wishlist-wrapper py-3">
+      <SectionContainer className="wishlist-wrapper">
         <div className="col-12 d-flex flex-wrap">
           {wishlistState.length === 0 && (
             <strong className="py-3">Wishlist is empty!</strong>

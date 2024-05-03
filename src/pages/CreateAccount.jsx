@@ -7,7 +7,7 @@ import CustomInput from "../components/CustomInput";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { useDispatch } from "react-redux";
-import { registerUser } from "../features/auth/authSlice";
+import { registerUser } from "../features/user/userSlice";
 
 const CreateAccount = () => {
   const dispatch = useDispatch();

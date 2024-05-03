@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
-import authService from "./authService";
+import userService from "./userService";
 
 const getCustomerFromLocalStorage = localStorage.getItem("user")
   ? JSON.parse(localStorage.getItem("user"))
@@ -21,7 +21,7 @@ export const registerUser = createAsyncThunk(
   "auth/register",
   async (data, thunkAPI) => {
     try {
-      return await authService.registerUser(data);
+      return await userService.registerUser(data);
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
@@ -32,7 +32,7 @@ export const loginUser = createAsyncThunk(
   "auth/login",
   async (user, thunkAPI) => {
     try {
-      return await authService.loginUser(user);
+      return await userService.loginUser(user);
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
@@ -43,7 +43,7 @@ export const getUserWishlist = createAsyncThunk(
   "user/wishlist",
   async (user, thunkAPI) => {
     try {
-      return await authService.getUserWishlist(user);
+      return await userService.getUserWishlist(user);
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
@@ -54,7 +54,7 @@ export const addToCart = createAsyncThunk(
   "user/cart/add",
   async (data, thunkAPI) => {
     try {
-      return await authService.addToCart(data);
+      return await userService.addToCart(data);
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
@@ -65,14 +65,16 @@ export const getUserCart = createAsyncThunk(
   "user/cart",
   async (user, thunkAPI) => {
     try {
-      return await authService.getUserCart(user);
+      return await userService.getUserCart(user);
     } catch (err) {
       return thunkAPI.rejectWithValue(err);
     }
   },
 );
 
-export const authSlice = createSlice({
+//export const removeProductFromCart =
+
+export const userSlice = createSlice({
   name: "auth",
   initialState: initialState,
   reducers: {},
@@ -170,4 +172,4 @@ export const authSlice = createSlice({
   },
 });
 
-export default authSlice.reducer;
+export default userSlice.reducer;

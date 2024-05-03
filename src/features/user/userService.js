@@ -37,12 +37,24 @@ const getUserCart = async () => {
   }
 };
 
-const authService = {
+const removeProductFromCart = async (productId) => {
+  const response = await axios.delete(
+    `${baseUrl}/user/remove-from-cart}`,
+    { productId: productId },
+    config,
+  );
+  if (response.data) {
+    return response.data;
+  }
+};
+
+const userService = {
   registerUser,
   loginUser,
   getUserWishlist,
   addToCart,
   getUserCart,
+  removeProductFromCart,
 };
 
-export default authService;
+export default userService;

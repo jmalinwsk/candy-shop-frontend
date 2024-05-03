@@ -3,22 +3,19 @@ import ReactStars from "react-rating-stars-component";
 import Meta from "../components/Meta";
 import Breadcrumbs from "../components/Breadcrumbs";
 import SectionContainer from "../components/SectionContainer";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getProduct } from "../features/products/productsSlice";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
-import { addToCart } from "../features/auth/authSlice";
+import { addToCart, getUserCart } from "../features/user/userSlice";
 
 const SingleProduct = () => {
-  const [orderedProduct, setOrderedProduct] = useState(true);
+  const [alreadyOrdered, setAlreadyOrdered] = useState(false);
   const location = useLocation();
   const productId = location.pathname.split("/")[2];
   const product = useSelector((state) => state.products.product);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getProduct(productId));
-  }, []);
   const [quantity, setQuantity] = useState(1);
   const addProductToCart = () => {
     dispatch(
@@ -29,6 +26,19 @@ const SingleProduct = () => {
       }),
     );
   };
+  const cart = useSelector((state) => state.auth.cart);
+  useEffect(() => {
+    dispatch(getProduct(productId));
+    dispatch(getUserCart());
+  }, []);
+  useEffect(() => {
+    for (let i = 0; i < cart.length; i++) {
+      if (productId === cart[i]?.productId?._id) {
+        setAlreadyOrdered(true);
+      }
+    }
+  }, []);
+
   return (
     <>
       <Meta title={"Product Name - Candy Shop"} />
@@ -73,24 +83,31 @@ const SingleProduct = () => {
               <p>{product?.brand}</p>
               <p className="text-justify my-4">{product?.description}</p>
             </div>
-            <div></div>
-            <div className="d-flex align-items-center">
-              <button className="me-auto">Add to wishlist</button>
-              <input
-                type="number"
-                min={1}
-                max={10}
-                className="form-control w-25 me-2"
-                onChange={(e) => setQuantity(e.target.value)}
-                value={quantity}
-              />
-              <button
-                type="button"
-                onClick={() => addProductToCart(product?._id)}
-              >
-                Add to cart
-              </button>
-            </div>
+            {alreadyOrdered ? (
+              <div className="d-flex align-items-end">
+                <Link to="/cart">
+                  <button type="button">Go to cart</button>
+                </Link>
+              </div>
+            ) : (
+              <div className="d-flex align-items-center">
+                <button className="me-auto">Add to wishlist</button>
+                <input
+                  type="number"
+                  min={1}
+                  max={10}
+                  className="form-control w-25 me-2"
+                  onChange={(e) => setQuantity(e.target.value)}
+                  value={quantity}
+                />
+                <button
+                  type="button"
+                  onClick={() => addProductToCart(product?._id)}
+                >
+                  Add to cart
+                </button>
+              </div>
+            )}
           </div>
         </div>
         <div className="reviews-wrapper py-3">
@@ -125,7 +142,7 @@ const SingleProduct = () => {
             </div>
           </div>
         </div>
-        {orderedProduct && (
+        {alreadyOrdered && (
           <div className="review-form-wrapper py-3">
             <div className="col-12">
               <h4 className="section-heading">Write a review</h4>
