@@ -370,6 +370,11 @@ a.breadcrumb-item.active::before {
   font-weight: bold;
 }
 
+.price-text-light {
+  text-align: center;
+  margin: 0;
+}
+
 /* Product card end */
 
 /* Store part */
@@ -426,6 +431,11 @@ a.breadcrumb-item.active::before {
 
 .cart-col-3 {
   width: 16%;
+}
+
+.cart-col-3 svg {
+  cursor: pointer;
+  color: var(--color-pale-violet-red);
 }
 
 .cart-col-4 {

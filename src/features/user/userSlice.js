@@ -72,7 +72,16 @@ export const getUserCart = createAsyncThunk(
   },
 );
 
-//export const removeProductFromCart =
+export const removeProductFromCart = createAsyncThunk(
+  "user/cart/remove-product",
+  async (productId, thunkAPI) => {
+    try {
+      return await userService.removeProductFromCart(productId);
+    } catch (err) {
+      return thunkAPI.rejectWithValue(err);
+    }
+  },
+);
 
 export const userSlice = createSlice({
   name: "auth",
@@ -110,7 +119,7 @@ export const userSlice = createSlice({
         state.isError = false;
         state.user = action.payload;
         if (state.isSuccess) {
-          toast.info("User logged in successfully");
+          toast.success("User logged in successfully");
         }
       })
       .addCase(loginUser.rejected, (state, action) => {
@@ -128,7 +137,6 @@ export const userSlice = createSlice({
         state.isSuccess = true;
         state.isError = false;
         state.wishlist = action.payload.wishlist;
-        state.message = "Wishlist fetched successfully";
       })
       .addCase(getUserWishlist.rejected, (state, action) => {
         state.isLoading = false;
@@ -145,7 +153,7 @@ export const userSlice = createSlice({
         state.isError = false;
         state.addedToCart = action.payload;
         if (state.isSuccess) {
-          toast.info("Item added to cart");
+          toast.success("Item added to cart");
         }
       })
       .addCase(addToCart.rejected, (state, action) => {
@@ -168,6 +176,27 @@ export const userSlice = createSlice({
         state.isError = true;
         state.isSuccess = false;
         state.message = action.error;
+      })
+      .addCase(removeProductFromCart.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(removeProductFromCart.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.isError = false;
+        state.deletedCartProduct = action.payload;
+        if (state.isSuccess) {
+          toast.success("Product removed from cart");
+        }
+      })
+      .addCase(removeProductFromCart.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.isSuccess = false;
+        state.message = action.error;
+        if (state.isError) {
+          toast.error(action.error);
+        }
       });
   },
 });

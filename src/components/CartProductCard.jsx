@@ -1,12 +1,18 @@
 import React from "react";
 import { FaTrash } from "react-icons/fa";
-import hubbaBubbaImage from "../images/products/hubba-bubba-bubble-tap-sour-blue-raspberry.jpg";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { getUserCart, removeProductFromCart } from "../features/user/userSlice";
 
 const CartProductCard = (props) => {
   const dispatch = useDispatch();
   const { item, index } = props;
+  const removeProduct = (productId) => {
+    dispatch(removeProductFromCart(productId));
+    setTimeout(() => {
+      dispatch(getUserCart());
+    }, 200);
+  };
   return (
     <>
       <div
@@ -26,14 +32,21 @@ const CartProductCard = (props) => {
           </div>
         </div>
         <div className="cart-col-2">
-          <p className="price-text text-start">${item?.productId.price} USD</p>
+          <p className="price-text-light text-start">
+            ${item?.productId.price} USD
+          </p>
         </div>
         <div className="cart-col-3 d-flex align-items-center">
-          <p className="price-text text-start">{item?.quantity}</p>
-          <FaTrash className="ms-4" />
+          <p className="price-text-light text-start">{item?.quantity}</p>
+          <FaTrash
+            onClick={(e) => {
+              removeProduct(item?.productId._id);
+            }}
+            className="ms-4"
+          />
         </div>
         <div className="cart-col-4">
-          <p className="price-text text-start">${item?.price} USD</p>
+          <p className="price-text-light text-start">${item?.price} USD</p>
         </div>
       </div>
     </>
