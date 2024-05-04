@@ -94,8 +94,6 @@ const SingleProduct = () => {
                 <button className="me-auto">Add to wishlist</button>
                 <input
                   type="number"
-                  min={1}
-                  max={10}
                   className="form-control w-25 me-2"
                   onChange={(e) => setQuantity(e.target.value)}
                   value={quantity}

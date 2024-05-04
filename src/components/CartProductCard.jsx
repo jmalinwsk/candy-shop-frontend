@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaTrash } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { getUserCart, removeProductFromCart } from "../features/user/userSlice";
+import {
+  getUserCart,
+  removeProductFromCart,
+  updateProductQuantityInCart,
+} from "../features/user/userSlice";
 
 const CartProductCard = (props) => {
   const dispatch = useDispatch();
   const { item, index } = props;
+  const [quantity, setQuantity] = useState(null);
   const removeProduct = (productId) => {
     dispatch(removeProductFromCart(productId));
+    setTimeout(() => {
+      dispatch(getUserCart());
+    }, 200);
+  };
+  const updateQuantity = (productId, quantity) => {
+    dispatch(
+      updateProductQuantityInCart({ productId: productId, quantity: quantity }),
+    );
     setTimeout(() => {
       dispatch(getUserCart());
     }, 200);
@@ -37,7 +50,17 @@ const CartProductCard = (props) => {
           </p>
         </div>
         <div className="cart-col-3 d-flex align-items-center">
-          <p className="price-text-light text-start">{item?.quantity}</p>
+          <input
+            type="number"
+            min={1}
+            max={10}
+            className="form-control w-50 me-2"
+            onChange={(e) => {
+              updateQuantity(item?.productId._id, e.target.value);
+              setQuantity(e.target.value);
+            }}
+            value={quantity ? quantity : item?.quantity}
+          />
           <FaTrash
             onClick={(e) => {
               removeProduct(item?.productId._id);

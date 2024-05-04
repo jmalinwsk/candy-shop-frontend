@@ -38,9 +38,20 @@ const getUserCart = async () => {
 };
 
 const removeProductFromCart = async (productId) => {
-  console.log(config);
   const response = await axios.delete(
     `${baseUrl}/user/remove-product/${productId}`,
+    config,
+  );
+  if (response.data) {
+    return response.data;
+  }
+};
+
+const updateProductQuantityInCart = async (data) => {
+  const { productId, quantity } = data;
+  const response = await axios.put(
+    `${baseUrl}/user/update-quantity/${productId}/${quantity}`,
+    null,
     config,
   );
   if (response.data) {
@@ -55,6 +66,7 @@ const userService = {
   addToCart,
   getUserCart,
   removeProductFromCart,
+  updateProductQuantityInCart,
 };
 
 export default userService;
