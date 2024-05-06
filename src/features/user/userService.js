@@ -48,10 +48,9 @@ const removeProductFromCart = async (productId) => {
 };
 
 const updateProductQuantityInCart = async (data) => {
-  const { productId, quantity } = data;
   const response = await axios.put(
-    `${baseUrl}/user/update-quantity/${productId}/${quantity}`,
-    null,
+    `${baseUrl}/user/update-quantity`,
+    data,
     config,
   );
   if (response.data) {
